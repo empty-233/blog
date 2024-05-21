@@ -6,6 +6,334 @@
         <description>Recent content in Posts on 空无的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 17 Apr 2020 15:46:53 +0000</lastBuildDate><atom:link href="https://blog.kongwu.top/posts/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Fri, 17 Apr 2020 15:46:53 +0000</lastBuildDate><atom:link href="https://blog.kongwu.top/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>复活PanDownload</title>
+        <link>https://blog.kongwu.top/p/resurrect-pandownload/</link>
+        <pubDate>Fri, 17 Apr 2020 15:46:53 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/p/resurrect-pandownload/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;由于&lt;del&gt;屑百度&lt;/del&gt;搞事，把&lt;a class=&#34;link&#34; href=&#34;https://www.baidu.com/s?ie=utf-8&amp;amp;f=8&amp;amp;rsv_bp=1&amp;amp;rsv_idx=1&amp;amp;tn=baidu&amp;amp;wd=PanDownload&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PanDownload 的作者给抓了&lt;/a&gt;，导致现在的 PanDownload 基本上是残废的，但最近看到 GitHub 上面有人发布了本地虚拟服务器
+现在的 PanDownload 速度也不能起飞了，该慢的还是慢，而且还容易黑号
+作者被抓了，之后百度如果更新了获取方法，那 PanDownload 就真的作废了
+&lt;strong&gt;&lt;em&gt;网上的那些其他服务器最好别用，鬼知道是不是&lt;del&gt;屑百度在钓鱼&lt;/del&gt;，而且用了其他的服务器也不知道有没有安全问题，能不用最好还是别用&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1下载&#34;&gt;1.下载
+&lt;/h3&gt;&lt;p&gt;去&lt;a class=&#34;link&#34; href=&#34;https://github.com/EXACG/pandownload-fake-localserver&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub&lt;/a&gt;上下载
+下载完解压之后运行&lt;strong&gt;Pandownload 服务离线工具.exe&lt;/strong&gt;，运行之后就可以挂在后台不管它了&lt;/p&gt;
+&lt;h4 id=&#34;2修改文件&#34;&gt;2.修改文件
+&lt;/h4&gt;&lt;p&gt;因为这是本地本地虚拟服务器，所以需要修改&lt;strong&gt;C:\Windows\System32\drivers\etc&lt;/strong&gt;里的&lt;strong&gt;hosts&lt;/strong&gt;
+用记事本或者其他软件打开&lt;strong&gt;hosts&lt;/strong&gt;（注意权限！可以用记事本修改，先复制到桌面修改完后再覆盖）
+添加：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;127.0.0.1 pandownload.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;按下 win+r，输入 cmd，打开 cmd 之后输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ipconfig/flushdns
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;打开&lt;strong&gt;PanDownload.exe&lt;/strong&gt;，登陆即可正常使用&lt;/p&gt;
+&lt;h2 id=&#34;注意事项&#34;&gt;注意事项
+&lt;/h2&gt;&lt;p&gt;如果不能登陆，使用&lt;a class=&#34;link&#34; href=&#34;https://www.baidu.com/s?ie=utf-8&amp;amp;f=8&amp;amp;rsv_bp=1&amp;amp;tn=baidu&amp;amp;wd=%E8%8E%B7%E5%8F%96%E7%99%BE%E5%BA%A6Cookie&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cookie&lt;/a&gt;登陆&lt;/p&gt;
+&lt;h2 id=&#34;吐槽&#34;&gt;吐槽
+&lt;/h2&gt;&lt;p&gt;&lt;del&gt;屑百度网盘，不冲超级会员就 8kb/s，冲了超级会员还限速，就很离谱了&lt;/del&gt;
+&lt;del&gt;现在直接抓人了还行，屑百度&lt;/del&gt;
+&lt;del&gt;今天上午在 b 站上看到的 PanDownload 教程视频，下午就没了？？？&lt;/del&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>利用hexo和gitee快速搭建免费博客</title>
+        <link>https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/</link>
+        <pubDate>Thu, 20 Feb 2020 06:42:45 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/</guid>
+        <description>&lt;img src="https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022010.webp" alt="Featured image of post 利用hexo和gitee快速搭建免费博客" /&gt;&lt;h2 id=&#34;重要提醒&#34;&gt;重要提醒
+&lt;/h2&gt;&lt;p&gt;由于gitee关闭了 &lt;a class=&#34;link&#34; href=&#34;https://gitee.com/help/articles/4136&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pages&lt;/a&gt; 服务，本文以下内容请使用GitHub pages搭建&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因服务维护调整，Gitee Pages 暂停提供服务，给您带来不便深感抱歉，感谢对 Gitee Pages 服务的支持。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;一-创建账号和搭建环境&#34;&gt;一、 创建账号和搭建环境
+&lt;/h2&gt;&lt;p&gt;首先先去&lt;a class=&#34;link&#34; href=&#34;https://gitee.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;gitee&lt;/a&gt;创建一个账号
+下载安装&lt;a class=&#34;link&#34; href=&#34;http://nodejs.cn/download/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Node.js&lt;/a&gt;
+下载安装&lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git&lt;/a&gt;（国内下载比较慢）&lt;/p&gt;
+&lt;h2 id=&#34;二搭建&#34;&gt;二、搭建
+&lt;/h2&gt;&lt;p&gt;登陆 gitee 新建仓库&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002201.webp&#34;
+	width=&#34;1920&#34;
+	height=&#34;976&#34;
+	srcset=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002201_hufbd1b338a05950b54d99a30f0679c863_51948_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002201_hufbd1b338a05950b54d99a30f0679c863_51948_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;472px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002202.webp&#34;
+	width=&#34;1920&#34;
+	height=&#34;975&#34;
+	srcset=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002202_hu889465e04d3c6eae9e04a7a1dc737805_91006_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002202_hu889465e04d3c6eae9e04a7a1dc737805_91006_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;472px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;开启 Gitee Pages 服务以后就作为你的博客地址&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002203.webp&#34;
+	width=&#34;1920&#34;
+	height=&#34;976&#34;
+	srcset=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002203_hu3bea90aaadac11600b403f876f335897_68892_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002203_hu3bea90aaadac11600b403f876f335897_68892_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;472px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;点击开始，然后记住这个地址（这个就是你的博客地址）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002204.webp&#34;
+	width=&#34;1920&#34;
+	height=&#34;974&#34;
+	srcset=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002204_hu4dd653b3816dc0ef23149f22422b3bad_113434_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002204_hu4dd653b3816dc0ef23149f22422b3bad_113434_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;473px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;创建一个文件夹，然后右键打开 Git Bash Here&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002205.webp&#34;
+	width=&#34;1096&#34;
+	height=&#34;711&#34;
+	srcset=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002205_hu39d13a2fac7e8de8c23c552268415877_37402_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002205_hu39d13a2fac7e8de8c23c552268415877_37402_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;369px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g hexo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;稍等几分钟就可以了（国内访问比较慢）
+实在太慢了可以换成淘宝镜像&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g cnpm --registry&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;https://registry.npm.taobao.org
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;确认是否安装好了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hexo v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002206.webp&#34;
+	width=&#34;581&#34;
+	height=&#34;370&#34;
+	srcset=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002206_hue6b98fa9188c2d40d893a9ef48c1ae50_22020_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002206_hue6b98fa9188c2d40d893a9ef48c1ae50_22020_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;157&#34;
+		data-flex-basis=&#34;376px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;初始化 Hexo&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hexo init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;初始化完成之后就可以看到文件夹里多出了一些文件&lt;/p&gt;
+&lt;p&gt;检查是否完成&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hexo s
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;启动本地服务，Ctrl+c 停止&lt;/p&gt;
+&lt;p&gt;浏览器输入 &lt;a class=&#34;link&#34; href=&#34;http://localhost:4000&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:4000&lt;/a&gt; 预览
+&lt;img src=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022010.webp&#34;
+	width=&#34;1918&#34;
+	height=&#34;976&#34;
+	srcset=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022010_hua8f9359e6036282f4819538f1d5abd06_89996_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022010_hua8f9359e6036282f4819538f1d5abd06_89996_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;471px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;三部署到-gitee-上&#34;&gt;三、部署到 Gitee 上
+&lt;/h2&gt;&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name &lt;span class=&#34;s2&#34;&gt;&amp;#34;你的Gitee用户名&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email &lt;span class=&#34;s2&#34;&gt;&amp;#34;你Gitee使用的邮箱&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在根目录打开_config.yml 配置 Git&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002207.webp&#34;
+	width=&#34;805&#34;
+	height=&#34;426&#34;
+	srcset=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002207_hud5d4936e8f6b5a356ec03b2f96cc2b38_48276_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002207_hud5d4936e8f6b5a356ec03b2f96cc2b38_48276_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;453px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;修改&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deploy:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  type: git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  repo: 你的地址
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  branch: master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;repo 在这里获取&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002208.webp&#34;
+	width=&#34;1920&#34;
+	height=&#34;976&#34;
+	srcset=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002208_hu113a17ea8d28563b4340a115561532eb_74118_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/202002208_hu113a17ea8d28563b4340a115561532eb_74118_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;472px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;四上传到-gitee&#34;&gt;四、上传到 Gitee
+&lt;/h2&gt;&lt;p&gt;安装自动部署发布工具&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install hexo-deployer-git --save
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hexo clean &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; hexo g &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; hexo d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;首次需要在 shell 中输入账号和密码。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;刷新一下就可以看到上传的文件了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022011.webp&#34;
+	width=&#34;1920&#34;
+	height=&#34;976&#34;
+	srcset=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022011_hu9091a1d38a4c579ba3aff2ef17b0da8f_79814_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022011_hu9091a1d38a4c579ba3aff2ef17b0da8f_79814_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;472px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;记得更新 Gitee Pages 服务！！！&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022012.webp&#34;
+	width=&#34;1920&#34;
+	height=&#34;978&#34;
+	srcset=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022012_hudeff70af8189cca05e978af313439570_113902_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022012_hudeff70af8189cca05e978af313439570_113902_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;471px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这样就可以打开之前 Gitee Pages 服务里的链接了
+至此，博客就搭建完成啦！！！
+在/Hexo/source/_posts 目录下就可以写我们的博客啦！！！&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.coolapk.com/feed/9577774?shareKey=MzQ2ZjdiYTY2ZWM4NWU3MDgxYzU~&amp;amp;shareUid=1312668&amp;amp;shareFrom=com.coolapk.market_10.0.3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;部分参考&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
     </channel>
 </rss>

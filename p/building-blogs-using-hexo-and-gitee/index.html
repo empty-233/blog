@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="重要提醒 由于gitee关闭了 pages 服务，本文以下内容请使用GitHub pages搭建 因服务维护调整，Gitee Pages 暂停提供服务，给您带来不便深感抱">
+<title>利用hexo和gitee快速搭建免费博客</title>
+
+<link rel='canonical' href='https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/'>
+
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="利用hexo和gitee快速搭建免费博客">
+<meta property='og:description' content="重要提醒 由于gitee关闭了 pages 服务，本文以下内容请使用GitHub pages搭建 因服务维护调整，Gitee Pages 暂停提供服务，给您带来不便深感抱">
+<meta property='og:url' content='https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/'>
+<meta property='og:site_name' content='空无的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='hexo' /><meta property='article:tag' content='gitee' /><meta property='article:tag' content='github' /><meta property='article:tag' content='blog' /><meta property='article:published_time' content='2020-02-20T06:42:45&#43;00:00'/><meta property='article:modified_time' content='2020-02-20T06:42:45&#43;00:00'/><meta property='og:image' content='https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022010.webp' />
+<meta name="twitter:title" content="利用hexo和gitee快速搭建免费博客">
+<meta name="twitter:description" content="重要提醒 由于gitee关闭了 pages 服务，本文以下内容请使用GitHub pages搭建 因服务维护调整，Gitee Pages 暂停提供服务，给您带来不便深感抱"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022010.webp' />
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huab6f5c1177f30831cb74f92a20a08f87_987604_300x0_resize_q75_h2_box_2.webp" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">💕</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">空无的博客</a></h1>
+            <h2 class="site-description">欢迎来到空无的博客</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/8559535'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/empty-233'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:mail@kongwu.top'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#重要提醒">重要提醒</a></li>
+    <li><a href="#一-创建账号和搭建环境">一、 创建账号和搭建环境</a></li>
+    <li><a href="#二搭建">二、搭建</a></li>
+    <li><a href="#三部署到-gitee-上">三、部署到 Gitee 上</a></li>
+    <li><a href="#四上传到-gitee">四、上传到 Gitee</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/building-blogs-using-hexo-and-gitee/">
+                <img src="/p/building-blogs-using-hexo-and-gitee/2020022010_hua8f9359e6036282f4819538f1d5abd06_89996_800x0_resize_q75_h2_box_2.webp"
+                        srcset="/p/building-blogs-using-hexo-and-gitee/2020022010_hua8f9359e6036282f4819538f1d5abd06_89996_800x0_resize_q75_h2_box_2.webp 800w, /p/building-blogs-using-hexo-and-gitee/2020022010_hua8f9359e6036282f4819538f1d5abd06_89996_1600x0_resize_q75_h2_box_2.webp 1600w"
+                        width="800" 
+                        height="407" 
+                        loading="lazy"
+                        alt="Featured image of post 利用hexo和gitee快速搭建免费博客" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%95%99%E7%A8%8B/" >
+                教程
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/building-blogs-using-hexo-and-gitee/">利用hexo和gitee快速搭建免费博客</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 20, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 2 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="重要提醒">重要提醒
+</h2><p>由于gitee关闭了 <a class="link" href="https://gitee.com/help/articles/4136"  target="_blank" rel="noopener"
+    >pages</a> 服务，本文以下内容请使用GitHub pages搭建</p>
+<blockquote>
+<p>因服务维护调整，Gitee Pages 暂停提供服务，给您带来不便深感抱歉，感谢对 Gitee Pages 服务的支持。</p>
+</blockquote>
+<h2 id="一-创建账号和搭建环境">一、 创建账号和搭建环境
+</h2><p>首先先去<a class="link" href="https://gitee.com/"  target="_blank" rel="noopener"
+    >gitee</a>创建一个账号
+下载安装<a class="link" href="http://nodejs.cn/download/"  target="_blank" rel="noopener"
+    >Node.js</a>
+下载安装<a class="link" href="https://git-scm.com/"  target="_blank" rel="noopener"
+    >Git</a>（国内下载比较慢）</p>
+<h2 id="二搭建">二、搭建
+</h2><p>登陆 gitee 新建仓库</p>
+<p><img src="/p/building-blogs-using-hexo-and-gitee/202002201.webp"
+	width="1920"
+	height="976"
+	srcset="/p/building-blogs-using-hexo-and-gitee/202002201_hufbd1b338a05950b54d99a30f0679c863_51948_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002201_hufbd1b338a05950b54d99a30f0679c863_51948_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="472px"
+	
+></p>
+<p><img src="/p/building-blogs-using-hexo-and-gitee/202002202.webp"
+	width="1920"
+	height="975"
+	srcset="/p/building-blogs-using-hexo-and-gitee/202002202_hu889465e04d3c6eae9e04a7a1dc737805_91006_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002202_hu889465e04d3c6eae9e04a7a1dc737805_91006_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="472px"
+	
+></p>
+<p>开启 Gitee Pages 服务以后就作为你的博客地址</p>
+<p><img src="/p/building-blogs-using-hexo-and-gitee/202002203.webp"
+	width="1920"
+	height="976"
+	srcset="/p/building-blogs-using-hexo-and-gitee/202002203_hu3bea90aaadac11600b403f876f335897_68892_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002203_hu3bea90aaadac11600b403f876f335897_68892_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="472px"
+	
+></p>
+<p>点击开始，然后记住这个地址（这个就是你的博客地址）</p>
+<p><img src="/p/building-blogs-using-hexo-and-gitee/202002204.webp"
+	width="1920"
+	height="974"
+	srcset="/p/building-blogs-using-hexo-and-gitee/202002204_hu4dd653b3816dc0ef23149f22422b3bad_113434_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002204_hu4dd653b3816dc0ef23149f22422b3bad_113434_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="197"
+		data-flex-basis="473px"
+	
+></p>
+<p>创建一个文件夹，然后右键打开 Git Bash Here</p>
+<p><img src="/p/building-blogs-using-hexo-and-gitee/202002205.webp"
+	width="1096"
+	height="711"
+	srcset="/p/building-blogs-using-hexo-and-gitee/202002205_hu39d13a2fac7e8de8c23c552268415877_37402_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002205_hu39d13a2fac7e8de8c23c552268415877_37402_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="154"
+		data-flex-basis="369px"
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install -g hexo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>稍等几分钟就可以了（国内访问比较慢）
+实在太慢了可以换成淘宝镜像</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install -g cnpm --registry<span class="o">=</span>https://registry.npm.taobao.org
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>确认是否安装好了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hexo v
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/building-blogs-using-hexo-and-gitee/202002206.webp"
+	width="581"
+	height="370"
+	srcset="/p/building-blogs-using-hexo-and-gitee/202002206_hue6b98fa9188c2d40d893a9ef48c1ae50_22020_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002206_hue6b98fa9188c2d40d893a9ef48c1ae50_22020_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="157"
+		data-flex-basis="376px"
+	
+></p>
+<p>初始化 Hexo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hexo init
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>初始化完成之后就可以看到文件夹里多出了一些文件</p>
+<p>检查是否完成</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hexo s
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>启动本地服务，Ctrl+c 停止</p>
+<p>浏览器输入 <a class="link" href="http://localhost:4000"  target="_blank" rel="noopener"
+    >http://localhost:4000</a> 预览
+<img src="/p/building-blogs-using-hexo-and-gitee/2020022010.webp"
+	width="1918"
+	height="976"
+	srcset="/p/building-blogs-using-hexo-and-gitee/2020022010_hua8f9359e6036282f4819538f1d5abd06_89996_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/2020022010_hua8f9359e6036282f4819538f1d5abd06_89996_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="471px"
+	
+></p>
+<hr>
+<h2 id="三部署到-gitee-上">三、部署到 Gitee 上
+</h2><p>输入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;你的Gitee用户名&#34;</span>
+</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;你Gitee使用的邮箱&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在根目录打开_config.yml 配置 Git</p>
+<p><img src="/p/building-blogs-using-hexo-and-gitee/202002207.webp"
+	width="805"
+	height="426"
+	srcset="/p/building-blogs-using-hexo-and-gitee/202002207_hud5d4936e8f6b5a356ec03b2f96cc2b38_48276_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002207_hud5d4936e8f6b5a356ec03b2f96cc2b38_48276_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="188"
+		data-flex-basis="453px"
+	
+></p>
+<p>修改</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">deploy:
+</span></span><span class="line"><span class="cl">  type: git
+</span></span><span class="line"><span class="cl">  repo: 你的地址
+</span></span><span class="line"><span class="cl">  branch: master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>repo 在这里获取</p>
+<p><img src="/p/building-blogs-using-hexo-and-gitee/202002208.webp"
+	width="1920"
+	height="976"
+	srcset="/p/building-blogs-using-hexo-and-gitee/202002208_hu113a17ea8d28563b4340a115561532eb_74118_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002208_hu113a17ea8d28563b4340a115561532eb_74118_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="472px"
+	
+></p>
+<hr>
+<h2 id="四上传到-gitee">四、上传到 Gitee
+</h2><p>安装自动部署发布工具</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install hexo-deployer-git --save
+</span></span><span class="line"><span class="cl">hexo clean <span class="o">&amp;&amp;</span> hexo g <span class="o">&amp;&amp;</span> hexo d
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>首次需要在 shell 中输入账号和密码。</p>
+<hr>
+<p>刷新一下就可以看到上传的文件了</p>
+<p><img src="/p/building-blogs-using-hexo-and-gitee/2020022011.webp"
+	width="1920"
+	height="976"
+	srcset="/p/building-blogs-using-hexo-and-gitee/2020022011_hu9091a1d38a4c579ba3aff2ef17b0da8f_79814_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/2020022011_hu9091a1d38a4c579ba3aff2ef17b0da8f_79814_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="472px"
+	
+></p>
+<p><strong><em>记得更新 Gitee Pages 服务！！！</em></strong></p>
+<p><img src="/p/building-blogs-using-hexo-and-gitee/2020022012.webp"
+	width="1920"
+	height="978"
+	srcset="/p/building-blogs-using-hexo-and-gitee/2020022012_hudeff70af8189cca05e978af313439570_113902_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/2020022012_hudeff70af8189cca05e978af313439570_113902_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="471px"
+	
+></p>
+<p>这样就可以打开之前 Gitee Pages 服务里的链接了
+至此，博客就搭建完成啦！！！
+在/Hexo/source/_posts 目录下就可以写我们的博客啦！！！</p>
+<p><a class="link" href="https://www.coolapk.com/feed/9577774?shareKey=MzQ2ZjdiYTY2ZWM4NWU3MDgxYzU~&amp;shareUid=1312668&amp;shareFrom=com.coolapk.market_10.0.3"  target="_blank" rel="noopener"
+    >部分参考</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hexo/">Hexo</a>
+        
+            <a href="/tags/gitee/">Gitee</a>
+        
+            <a href="/tags/github/">Github</a>
+        
+            <a href="/tags/blog/">Blog</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-ND 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/resurrect-pandownload/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">复活PanDownload</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="empty-233/blog"
+    data-repo-id="R_kgDOL-Xchw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOL-Xch84CfgH6"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 空无的博客
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

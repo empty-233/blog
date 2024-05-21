@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>空无的博客</title>
-        <link>https://blog.kongwu.top/</link>
-        <description>Recent content on 空无的博客</description>
+        <title>教程 on 空无的博客</title>
+        <link>https://blog.kongwu.top/categories/%E6%95%99%E7%A8%8B/</link>
+        <description>Recent content in 教程 on 空无的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 21 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.kongwu.top/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>关于</title>
-        <link>https://blog.kongwu.top/about/</link>
-        <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.kongwu.top/about/</guid>
-        <description>&lt;p&gt;欢迎来到我的博客。&lt;/p&gt;
-&lt;p&gt;这是目前连百度都没有收录的博客，你能找到是我最大的荣幸！&lt;/p&gt;
-&lt;p&gt;这是一个基于 &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;hugo&lt;/a&gt; 的博客，主题来自 &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;stack&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;本人比较懒，博客随机更新！&lt;/p&gt;
-&lt;p&gt;需要联系作者可以通过 &lt;a class=&#34;link&#34; href=&#34;mailto:mail@kongwu.top&#34; &gt;邮箱&lt;/a&gt; 或者在这下面评论&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Fri, 17 Apr 2020 15:46:53 +0000</lastBuildDate><atom:link href="https://blog.kongwu.top/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>复活PanDownload</title>
         <link>https://blog.kongwu.top/p/resurrect-pandownload/</link>
         <pubDate>Fri, 17 Apr 2020 15:46:53 +0000</pubDate>
@@ -348,30 +333,6 @@
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.coolapk.com/feed/9577774?shareKey=MzQ2ZjdiYTY2ZWM4NWU3MDgxYzU~&amp;amp;shareUid=1312668&amp;amp;shareFrom=com.coolapk.market_10.0.3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;部分参考&lt;/a&gt;&lt;/p&gt;
 </description>
-        </item>
-        <item>
-        <title>归档</title>
-        <link>https://blog.kongwu.top/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.kongwu.top/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>链接</title>
-        <link>https://blog.kongwu.top/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.kongwu.top/links/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>搜索</title>
-        <link>https://blog.kongwu.top/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.kongwu.top/search/</guid>
-        <description></description>
         </item>
         
     </channel>

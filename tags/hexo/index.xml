@@ -1,74 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>空无的博客</title>
-        <link>https://blog.kongwu.top/</link>
-        <description>Recent content on 空无的博客</description>
+        <title>Hexo on 空无的博客</title>
+        <link>https://blog.kongwu.top/tags/hexo/</link>
+        <description>Recent content in Hexo on 空无的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 21 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.kongwu.top/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>关于</title>
-        <link>https://blog.kongwu.top/about/</link>
-        <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.kongwu.top/about/</guid>
-        <description>&lt;p&gt;欢迎来到我的博客。&lt;/p&gt;
-&lt;p&gt;这是目前连百度都没有收录的博客，你能找到是我最大的荣幸！&lt;/p&gt;
-&lt;p&gt;这是一个基于 &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;hugo&lt;/a&gt; 的博客，主题来自 &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;stack&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;本人比较懒，博客随机更新！&lt;/p&gt;
-&lt;p&gt;需要联系作者可以通过 &lt;a class=&#34;link&#34; href=&#34;mailto:mail@kongwu.top&#34; &gt;邮箱&lt;/a&gt; 或者在这下面评论&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>复活PanDownload</title>
-        <link>https://blog.kongwu.top/p/resurrect-pandownload/</link>
-        <pubDate>Fri, 17 Apr 2020 15:46:53 +0000</pubDate>
-        
-        <guid>https://blog.kongwu.top/p/resurrect-pandownload/</guid>
-        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
-&lt;/h2&gt;&lt;p&gt;由于&lt;del&gt;屑百度&lt;/del&gt;搞事，把&lt;a class=&#34;link&#34; href=&#34;https://www.baidu.com/s?ie=utf-8&amp;amp;f=8&amp;amp;rsv_bp=1&amp;amp;rsv_idx=1&amp;amp;tn=baidu&amp;amp;wd=PanDownload&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;PanDownload 的作者给抓了&lt;/a&gt;，导致现在的 PanDownload 基本上是残废的，但最近看到 GitHub 上面有人发布了本地虚拟服务器
-现在的 PanDownload 速度也不能起飞了，该慢的还是慢，而且还容易黑号
-作者被抓了，之后百度如果更新了获取方法，那 PanDownload 就真的作废了
-&lt;strong&gt;&lt;em&gt;网上的那些其他服务器最好别用，鬼知道是不是&lt;del&gt;屑百度在钓鱼&lt;/del&gt;，而且用了其他的服务器也不知道有没有安全问题，能不用最好还是别用&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;1下载&#34;&gt;1.下载
-&lt;/h3&gt;&lt;p&gt;去&lt;a class=&#34;link&#34; href=&#34;https://github.com/EXACG/pandownload-fake-localserver&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitHub&lt;/a&gt;上下载
-下载完解压之后运行&lt;strong&gt;Pandownload 服务离线工具.exe&lt;/strong&gt;，运行之后就可以挂在后台不管它了&lt;/p&gt;
-&lt;h4 id=&#34;2修改文件&#34;&gt;2.修改文件
-&lt;/h4&gt;&lt;p&gt;因为这是本地本地虚拟服务器，所以需要修改&lt;strong&gt;C:\Windows\System32\drivers\etc&lt;/strong&gt;里的&lt;strong&gt;hosts&lt;/strong&gt;
-用记事本或者其他软件打开&lt;strong&gt;hosts&lt;/strong&gt;（注意权限！可以用记事本修改，先复制到桌面修改完后再覆盖）
-添加：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;127.0.0.1 pandownload.com
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;按下 win+r，输入 cmd，打开 cmd 之后输入&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ipconfig/flushdns
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;打开&lt;strong&gt;PanDownload.exe&lt;/strong&gt;，登陆即可正常使用&lt;/p&gt;
-&lt;h2 id=&#34;注意事项&#34;&gt;注意事项
-&lt;/h2&gt;&lt;p&gt;如果不能登陆，使用&lt;a class=&#34;link&#34; href=&#34;https://www.baidu.com/s?ie=utf-8&amp;amp;f=8&amp;amp;rsv_bp=1&amp;amp;tn=baidu&amp;amp;wd=%E8%8E%B7%E5%8F%96%E7%99%BE%E5%BA%A6Cookie&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Cookie&lt;/a&gt;登陆&lt;/p&gt;
-&lt;h2 id=&#34;吐槽&#34;&gt;吐槽
-&lt;/h2&gt;&lt;p&gt;&lt;del&gt;屑百度网盘，不冲超级会员就 8kb/s，冲了超级会员还限速，就很离谱了&lt;/del&gt;
-&lt;del&gt;现在直接抓人了还行，屑百度&lt;/del&gt;
-&lt;del&gt;今天上午在 b 站上看到的 PanDownload 教程视频，下午就没了？？？&lt;/del&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Thu, 20 Feb 2020 06:42:45 +0000</lastBuildDate><atom:link href="https://blog.kongwu.top/tags/hexo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>利用hexo和gitee快速搭建免费博客</title>
         <link>https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/</link>
         <pubDate>Thu, 20 Feb 2020 06:42:45 +0000</pubDate>
@@ -348,30 +286,6 @@
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.coolapk.com/feed/9577774?shareKey=MzQ2ZjdiYTY2ZWM4NWU3MDgxYzU~&amp;amp;shareUid=1312668&amp;amp;shareFrom=com.coolapk.market_10.0.3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;部分参考&lt;/a&gt;&lt;/p&gt;
 </description>
-        </item>
-        <item>
-        <title>归档</title>
-        <link>https://blog.kongwu.top/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.kongwu.top/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>链接</title>
-        <link>https://blog.kongwu.top/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.kongwu.top/links/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>搜索</title>
-        <link>https://blog.kongwu.top/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.kongwu.top/search/</guid>
-        <description></description>
         </item>
         
     </channel>
