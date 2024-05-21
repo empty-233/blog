@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on 空无的博客</title>
+        <link>https://blog.kongwu.top/posts/</link>
+        <description>Recent content in Posts on 空无的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 17 Apr 2020 15:46:53 +0000</lastBuildDate><atom:link href="https://blog.kongwu.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    </channel>
+</rss>
