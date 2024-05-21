@@ -60,8 +60,8 @@
         
         <guid>https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/</guid>
         <description>&lt;img src="https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022010.webp" alt="Featured image of post 利用hexo和gitee快速搭建免费博客" /&gt;&lt;h2 id=&#34;重要提醒&#34;&gt;重要提醒
-&lt;/h2&gt;&lt;p&gt;由于gitee关闭了 &lt;a class=&#34;link&#34; href=&#34;https://gitee.com/help/articles/4136&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;pages&lt;/a&gt; 服务，本文以下内容请使用GitHub pages搭建&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;由于 gitee 关闭了 &lt;a class=&#34;link&#34; href=&#34;https://gitee.com/help/articles/4136&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pages&lt;/a&gt; 服务，本文以下内容请使用 GitHub pages 搭建&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;因服务维护调整，Gitee Pages 暂停提供服务，给您带来不便深感抱歉，感谢对 Gitee Pages 服务的支持。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -224,7 +224,6 @@
 		data-flex-basis=&#34;471px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;三部署到-gitee-上&#34;&gt;三、部署到 Gitee 上
 &lt;/h2&gt;&lt;p&gt;输入&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -282,7 +281,6 @@
 		data-flex-basis=&#34;472px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;四上传到-gitee&#34;&gt;四、上传到 Gitee
 &lt;/h2&gt;&lt;p&gt;安装自动部署发布工具&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -296,7 +294,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;首次需要在 shell 中输入账号和密码。&lt;/p&gt;
-&lt;hr&gt;
 &lt;p&gt;刷新一下就可以看到上传的文件了&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022011.webp&#34;
 	width=&#34;1920&#34;
