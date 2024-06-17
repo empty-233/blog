@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="重要提醒 由于 gitee 关闭了 pages 服务，本文以下内容请使用 GitHub pages 搭建 因服务维护调整，Gitee Pages 暂停提供服务，给您带来不便深感抱歉，感谢对 Gitee Pages 服务的支持。">
-<title>利用hexo和gitee快速搭建免费博客</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Windows 沙盒提供了轻型桌面环境，可以安全地在隔离状态下运行应用程序。 安装在 Windows 沙盒环境下的软件保持“沙盒”状态，并且与主机分开运行。 沙盒是临时的。 关">
+<title>Windows 沙盒配置</title>
 
-<link rel='canonical' href='https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/'>
+<link rel='canonical' href='https://blog.kongwu.top/p/sandbox-configuration/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="利用hexo和gitee快速搭建免费博客">
-<meta property='og:description' content="重要提醒 由于 gitee 关闭了 pages 服务，本文以下内容请使用 GitHub pages 搭建 因服务维护调整，Gitee Pages 暂停提供服务，给您带来不便深感抱歉，感谢对 Gitee Pages 服务的支持。">
-<meta property='og:url' content='https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/'>
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Windows 沙盒配置">
+<meta property='og:description' content="Windows 沙盒提供了轻型桌面环境，可以安全地在隔离状态下运行应用程序。 安装在 Windows 沙盒环境下的软件保持“沙盒”状态，并且与主机分开运行。 沙盒是临时的。 关">
+<meta property='og:url' content='https://blog.kongwu.top/p/sandbox-configuration/'>
 <meta property='og:site_name' content='空无的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='hexo' /><meta property='article:tag' content='gitee' /><meta property='article:tag' content='github' /><meta property='article:tag' content='blog' /><meta property='article:published_time' content='2020-02-20T06:42:45&#43;00:00'/><meta property='article:modified_time' content='2020-02-20T06:42:45&#43;00:00'/><meta property='og:image' content='https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022010.webp' />
-<meta name="twitter:title" content="利用hexo和gitee快速搭建免费博客">
-<meta name="twitter:description" content="重要提醒 由于 gitee 关闭了 pages 服务，本文以下内容请使用 GitHub pages 搭建 因服务维护调整，Gitee Pages 暂停提供服务，给您带来不便深感抱歉，感谢对 Gitee Pages 服务的支持。"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://blog.kongwu.top/p/building-blogs-using-hexo-and-gitee/2020022010.webp' />
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='windows-sandbox' /><meta property='article:tag' content='sandbox' /><meta property='article:tag' content='tencent' /><meta property='article:tag' content='腾讯' /><meta property='article:tag' content='KOOK' /><meta property='article:published_time' content='2024-06-17T10:58:05&#43;00:00'/><meta property='article:modified_time' content='2024-06-17T10:58:05&#43;00:00'/>
+<meta name="twitter:title" content="Windows 沙盒配置">
+<meta name="twitter:description" content="Windows 沙盒提供了轻型桌面环境，可以安全地在隔离状态下运行应用程序。 安装在 Windows 沙盒环境下的软件保持“沙盒”状态，并且与主机分开运行。 沙盒是临时的。 关">
   
     
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-N7LHGEE4LB"></script>
@@ -294,11 +293,14 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#重要提醒">重要提醒</a></li>
-    <li><a href="#一-创建账号和搭建环境">一、 创建账号和搭建环境</a></li>
-    <li><a href="#二搭建">二、搭建</a></li>
-    <li><a href="#三部署到-gitee-上">三、部署到 Gitee 上</a></li>
-    <li><a href="#四上传到-gitee">四、上传到 Gitee</a></li>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#基础配置">基础配置</a></li>
+    <li><a href="#配置">配置</a>
+      <ol>
+        <li><a href="#腾讯全家桶">腾讯全家桶</a></li>
+        <li><a href="#kook">KOOK</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -310,20 +312,8 @@
 
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/building-blogs-using-hexo-and-gitee/">
-                <img src="/p/building-blogs-using-hexo-and-gitee/2020022010_hua8f9359e6036282f4819538f1d5abd06_89996_800x0_resize_q75_h2_box_2.webp"
-                        srcset="/p/building-blogs-using-hexo-and-gitee/2020022010_hua8f9359e6036282f4819538f1d5abd06_89996_800x0_resize_q75_h2_box_2.webp 800w, /p/building-blogs-using-hexo-and-gitee/2020022010_hua8f9359e6036282f4819538f1d5abd06_89996_1600x0_resize_q75_h2_box_2.webp 1600w"
-                        width="800" 
-                        height="407" 
-                        loading="lazy"
-                        alt="Featured image of post 利用hexo和gitee快速搭建免费博客" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
@@ -338,7 +328,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/building-blogs-using-hexo-and-gitee/">利用hexo和gitee快速搭建免费博客</a>
+            <a href="/p/sandbox-configuration/">Windows 沙盒配置</a>
         </h2>
     
         
@@ -360,7 +350,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Feb 20, 2020</time>
+                <time class="article-time--published">Jun 17, 2024</time>
             </div>
         
 
@@ -390,277 +380,148 @@
     <section class="article-content">
     
     
-    <h2 id="重要提醒">重要提醒
-</h2><p>由于 gitee 关闭了 <a class="link" href="https://gitee.com/help/articles/4136"  target="_blank" rel="noopener"
-    >pages</a> 服务，本文以下内容请使用 GitHub pages 搭建</p>
-<blockquote>
-<p>因服务维护调整，Gitee Pages 暂停提供服务，给您带来不便深感抱歉，感谢对 Gitee Pages 服务的支持。</p>
+    <blockquote>
+<p>Windows 沙盒提供了轻型桌面环境，可以安全地在隔离状态下运行应用程序。 安装在 Windows 沙盒环境下的软件保持“沙盒”状态，并且与主机分开运行。</p>
+<p>沙盒是临时的。 关闭后，系统将删除所有软件和文件以及状态。 每次打开应用程序时，都会获得沙盒的全新实例。 但请注意，从 Windows 11 版本 22H2 开始，你的数据会通过从虚拟化环境内启动的重启而持续存在，这对于安装需要操作系统重新启动的应用程序很有用。</p>
+<p>安装在主机上的软件和应用程序不会直接出现在沙盒中。 如果需要在 Windows 沙盒环境中运行特定的应用程序，则相应的应用程序必须就是安装在沙盒环境中才行。</p>
+<p>Windows 沙盒具有以下属性：</p>
+<ul>
+<li>Windows 的部件：此功能所需的一切内容都包含在 Windows 10 专业版和企业版中。 无需下载虚拟硬盘 (VHD) 。</li>
+<li>原生：每次 Windows 沙盒运行时，都像全新安装的 Windows 一样干净。</li>
+<li>可处置：设备上不会保留任何内容。 当用户关闭应用程序时，系统会丢弃所有内容。</li>
+<li>安全：使用基于硬件的虚拟化进行内核隔离。 它依赖 Microsoft 虚拟机监控程序运行单独的内核，可将 Windows 沙盒与主机隔离。</li>
+<li>高效：采用集成的内核计划程序、智能内存管理和虚拟 GPU。</li>
+</ul>
 </blockquote>
-<h2 id="一-创建账号和搭建环境">一、 创建账号和搭建环境
-</h2><p>首先先去<a class="link" href="https://gitee.com/"  target="_blank" rel="noopener"
-    >gitee</a>创建一个账号
-下载安装<a class="link" href="http://nodejs.cn/download/"  target="_blank" rel="noopener"
-    >Node.js</a>
-下载安装<a class="link" href="https://git-scm.com/"  target="_blank" rel="noopener"
-    >Git</a>（国内下载比较慢）</p>
-<h2 id="二搭建">二、搭建
-</h2><p>登陆 gitee 新建仓库</p>
-<p><img src="/p/building-blogs-using-hexo-and-gitee/202002201.webp"
-	width="1920"
-	height="976"
-	srcset="/p/building-blogs-using-hexo-and-gitee/202002201_hufbd1b338a05950b54d99a30f0679c863_51948_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002201_hufbd1b338a05950b54d99a30f0679c863_51948_1024x0_resize_q75_h2_box_2.webp 1024w"
+<h2 id="安装">安装
+</h2><p><a class="link" href="https://learn.microsoft.com/zh-cn/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview#installation"  target="_blank" rel="noopener"
+    >官方教程</a></p>
+<p>打开控制面板，选择 <code>程序</code> -&gt; <code>启用或关闭 Windows 功能</code> -&gt; <code>Windows 沙盒</code></p>
+<p><img src="/p/sandbox-configuration/01.png"
+	width="736"
+	height="629"
+	srcset="/p/sandbox-configuration/01_hu3c4a41215d58e6b9a5f4e00d4555b69b_72018_480x0_resize_box_3.png 480w, /p/sandbox-configuration/01_hu3c4a41215d58e6b9a5f4e00d4555b69b_72018_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
-		alt="图片"
+		alt="记得重启"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="196"
-		data-flex-basis="472px"
+		data-flex-grow="117"
+		data-flex-basis="280px"
 	
 ></p>
-<p><img src="/p/building-blogs-using-hexo-and-gitee/202002202.webp"
-	width="1920"
-	height="975"
-	srcset="/p/building-blogs-using-hexo-and-gitee/202002202_hu889465e04d3c6eae9e04a7a1dc737805_91006_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002202_hu889465e04d3c6eae9e04a7a1dc737805_91006_1024x0_resize_q75_h2_box_2.webp 1024w"
-	loading="lazy"
-	
-		alt="图片"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="196"
-		data-flex-basis="472px"
-	
-></p>
-<p>开启 Gitee Pages 服务以后就作为你的博客地址</p>
-<p><img src="/p/building-blogs-using-hexo-and-gitee/202002203.webp"
-	width="1920"
-	height="976"
-	srcset="/p/building-blogs-using-hexo-and-gitee/202002203_hu3bea90aaadac11600b403f876f335897_68892_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002203_hu3bea90aaadac11600b403f876f335897_68892_1024x0_resize_q75_h2_box_2.webp 1024w"
-	loading="lazy"
-	
-		alt="图片"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="196"
-		data-flex-basis="472px"
-	
-></p>
-<p>点击开始，然后记住这个地址（这个就是你的博客地址）</p>
-<p><img src="/p/building-blogs-using-hexo-and-gitee/202002204.webp"
-	width="1920"
-	height="974"
-	srcset="/p/building-blogs-using-hexo-and-gitee/202002204_hu4dd653b3816dc0ef23149f22422b3bad_113434_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002204_hu4dd653b3816dc0ef23149f22422b3bad_113434_1024x0_resize_q75_h2_box_2.webp 1024w"
-	loading="lazy"
-	
-		alt="图片"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="197"
-		data-flex-basis="473px"
-	
-></p>
-<p>创建一个文件夹，然后右键打开 Git Bash Here</p>
-<p><img src="/p/building-blogs-using-hexo-and-gitee/202002205.webp"
-	width="1096"
-	height="711"
-	srcset="/p/building-blogs-using-hexo-and-gitee/202002205_hu39d13a2fac7e8de8c23c552268415877_37402_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002205_hu39d13a2fac7e8de8c23c552268415877_37402_1024x0_resize_q75_h2_box_2.webp 1024w"
-	loading="lazy"
-	
-		alt="图片"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="154"
-		data-flex-basis="369px"
-	
-></p>
+<p>tip：家庭版不支持</p>
+<h2 id="基础配置">基础配置
+</h2><p>内存大小: <code>&lt;MemoryInMB&gt;value&lt;/MemoryInMB&gt;</code> (以 MB 为单位)</p>
+<p>音频输入: <code>&lt;AudioInput&gt;value&lt;/AudioInput&gt;</code> (Enable|Disable|Default)</p>
+<p>剪贴板重定向: <code>&lt;ClipboardRedirection&gt;value&lt;/ClipboardRedirection&gt;</code> (Enable|Disable|Default)</p>
+<p>视频输入: <code>&lt;VideoInput&gt;value&lt;/VideoInput&gt;</code> (Enable|Disable|Default)</p>
+<p>映射文件夹</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install -g hexo
+<pre tabindex="0" class="chroma"><code class="language-XML" data-lang="XML"><span class="line"><span class="cl"><span class="nt">&lt;MappedFolders&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;HostFolder&gt;</span>absolute path to the host folder<span class="nt">&lt;/HostFolder&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;SandboxFolder&gt;</span>absolute path to the sandbox folder<span class="nt">&lt;/SandboxFolder&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;ReadOnly&gt;</span>value<span class="nt">&lt;/ReadOnly&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/MappedFolders&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>稍等几分钟就可以了（国内访问比较慢）
-实在太慢了可以换成淘宝镜像</p>
-<div class="highlight"><div class="chroma">
+</div><ul>
+<li>HostFolder：指定主机上要共享到沙盒中的文件夹。 该文件夹必须已存在于主机上，否则容器无法启动。</li>
+<li>SandboxFolder：指定要将文件夹映射到的沙盒中的目标。 如果该文件夹不存在，则会创建它。 如果未指定沙盒文件夹，该文件夹将映射到容器桌面。</li>
+<li>ReadOnly：如果为 true，则强制从容器内部对共享文件夹进行只读访问。 支持的值：true/false。 默认为 false。</li>
+</ul>
+<p>更多配置: <a class="link" href="https://learn.microsoft.com/zh-cn/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-configure-using-wsb-file"  target="_blank" rel="noopener"
+    >官方文档</a></p>
+<p>tip: 如果出现问题，可以尝试把 <code>SysWOW64</code> 挂载到系统 <code>C:\Windows\SysWOW64</code>，或者安装软件完成之后复制 <code>SysWOW64</code> 并挂载</p>
+<h2 id="配置">配置
+</h2><p>欢迎联系作者提供更多配置，联系方式: <a class="link" href="mailto:mail@kongwu.top" >邮箱</a></p>
+<p>以下给出的是映射文件夹，可以参考 <a class="link" href="https://github.com/empty-233/tencent-sandbox"  target="_blank" rel="noopener"
+    >tencent-sandbox</a> 来进行配置</p>
+<p><del>想隔离游戏？先不说卡不卡，反作弊都绕不过</del></p>
+<h3 id="腾讯全家桶">腾讯全家桶
+</h3><p><a class="link" href="https://github.com/empty-233/tencent-sandbox"  target="_blank" rel="noopener"
+    >tencent-sandbox</a></p>
+<p><a class="link" href="https://www.bilibili.com/video/av360967325"  target="_blank" rel="noopener"
+    >视频教程</a></p>
+<h3 id="kook">KOOK
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install -g cnpm --registry<span class="o">=</span>https://registry.npm.taobao.org
+<pre tabindex="0" class="chroma"><code class="language-XML" data-lang="XML"><span class="line"><span class="cl">    <span class="nt">&lt;MappedFolders&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- 桌面 --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;HostFolder&gt;</span>.\Desktop<span class="nt">&lt;/HostFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\Desktop<span class="nt">&lt;/SandboxFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;ReadOnly&gt;</span>false<span class="nt">&lt;/ReadOnly&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- App --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;HostFolder&gt;</span>.\App\KOOK<span class="nt">&lt;/HostFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\AppData\Local\KOOK<span class="nt">&lt;/SandboxFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;ReadOnly&gt;</span>false<span class="nt">&lt;/ReadOnly&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- Roaming --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;HostFolder&gt;</span>.\Data\Roaming\KOOK<span class="nt">&lt;/HostFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\AppData\Roaming\KOOK<span class="nt">&lt;/SandboxFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;ReadOnly&gt;</span>false<span class="nt">&lt;/ReadOnly&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- Documents --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;HostFolder&gt;</span>.\Data\Documents\KOOK<span class="nt">&lt;/HostFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\Documents\KOOK<span class="nt">&lt;/SandboxFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;ReadOnly&gt;</span>false<span class="nt">&lt;/ReadOnly&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/MappedFolders&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>确认是否安装好了</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hexo v
-</span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="/p/building-blogs-using-hexo-and-gitee/202002206.webp"
-	width="581"
-	height="370"
-	srcset="/p/building-blogs-using-hexo-and-gitee/202002206_hue6b98fa9188c2d40d893a9ef48c1ae50_22020_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002206_hue6b98fa9188c2d40d893a9ef48c1ae50_22020_1024x0_resize_q75_h2_box_2.webp 1024w"
-	loading="lazy"
-	
-		alt="图片"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="157"
-		data-flex-basis="376px"
-	
-></p>
-<p>初始化 Hexo</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hexo init
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>初始化完成之后就可以看到文件夹里多出了一些文件</p>
-<p>检查是否完成</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hexo s
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>启动本地服务，Ctrl+c 停止</p>
-<p>浏览器输入 <a class="link" href="http://localhost:4000"  target="_blank" rel="noopener"
-    >http://localhost:4000</a> 预览
-<img src="/p/building-blogs-using-hexo-and-gitee/2020022010.webp"
-	width="1918"
-	height="976"
-	srcset="/p/building-blogs-using-hexo-and-gitee/2020022010_hua8f9359e6036282f4819538f1d5abd06_89996_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/2020022010_hua8f9359e6036282f4819538f1d5abd06_89996_1024x0_resize_q75_h2_box_2.webp 1024w"
-	loading="lazy"
-	
-		alt="图片"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="196"
-		data-flex-basis="471px"
-	
-></p>
-<h2 id="三部署到-gitee-上">三、部署到 Gitee 上
-</h2><p>输入</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;你的Gitee用户名&#34;</span>
-</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;你Gitee使用的邮箱&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在根目录打开_config.yml 配置 Git</p>
-<p><img src="/p/building-blogs-using-hexo-and-gitee/202002207.webp"
-	width="805"
-	height="426"
-	srcset="/p/building-blogs-using-hexo-and-gitee/202002207_hud5d4936e8f6b5a356ec03b2f96cc2b38_48276_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002207_hud5d4936e8f6b5a356ec03b2f96cc2b38_48276_1024x0_resize_q75_h2_box_2.webp 1024w"
-	loading="lazy"
-	
-		alt="图片"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="188"
-		data-flex-basis="453px"
-	
-></p>
-<p>修改</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">deploy:
-</span></span><span class="line"><span class="cl">  type: git
-</span></span><span class="line"><span class="cl">  repo: 你的地址
-</span></span><span class="line"><span class="cl">  branch: master
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>repo 在这里获取</p>
-<p><img src="/p/building-blogs-using-hexo-and-gitee/202002208.webp"
-	width="1920"
-	height="976"
-	srcset="/p/building-blogs-using-hexo-and-gitee/202002208_hu113a17ea8d28563b4340a115561532eb_74118_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/202002208_hu113a17ea8d28563b4340a115561532eb_74118_1024x0_resize_q75_h2_box_2.webp 1024w"
-	loading="lazy"
-	
-		alt="图片"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="196"
-		data-flex-basis="472px"
-	
-></p>
-<h2 id="四上传到-gitee">四、上传到 Gitee
-</h2><p>安装自动部署发布工具</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install hexo-deployer-git --save
-</span></span><span class="line"><span class="cl">hexo clean <span class="o">&amp;&amp;</span> hexo g <span class="o">&amp;&amp;</span> hexo d
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>首次需要在 shell 中输入账号和密码。</p>
-<p>刷新一下就可以看到上传的文件了</p>
-<p><img src="/p/building-blogs-using-hexo-and-gitee/2020022011.webp"
-	width="1920"
-	height="976"
-	srcset="/p/building-blogs-using-hexo-and-gitee/2020022011_hu9091a1d38a4c579ba3aff2ef17b0da8f_79814_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/2020022011_hu9091a1d38a4c579ba3aff2ef17b0da8f_79814_1024x0_resize_q75_h2_box_2.webp 1024w"
-	loading="lazy"
-	
-		alt="图片"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="196"
-		data-flex-basis="472px"
-	
-></p>
-<p><strong><em>记得更新 Gitee Pages 服务！！！</em></strong></p>
-<p><img src="/p/building-blogs-using-hexo-and-gitee/2020022012.webp"
-	width="1920"
-	height="978"
-	srcset="/p/building-blogs-using-hexo-and-gitee/2020022012_hudeff70af8189cca05e978af313439570_113902_480x0_resize_q75_h2_box_2.webp 480w, /p/building-blogs-using-hexo-and-gitee/2020022012_hudeff70af8189cca05e978af313439570_113902_1024x0_resize_q75_h2_box_2.webp 1024w"
-	loading="lazy"
-	
-		alt="图片"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="196"
-		data-flex-basis="471px"
-	
-></p>
-<p>这样就可以打开之前 Gitee Pages 服务里的链接了
-至此，博客就搭建完成啦！！！
-在/Hexo/source/_posts 目录下就可以写我们的博客啦！！！</p>
-<p><a class="link" href="https://www.coolapk.com/feed/9577774?shareKey=MzQ2ZjdiYTY2ZWM4NWU3MDgxYzU~&amp;shareUid=1312668&amp;shareFrom=com.coolapk.market_10.0.3"  target="_blank" rel="noopener"
-    >部分参考</a></p>
-
 </section>
 
 
@@ -668,13 +529,15 @@
     
     <section class="article-tags">
         
-            <a href="/tags/hexo/">Hexo</a>
+            <a href="/tags/windows-sandbox/">Windows-Sandbox</a>
         
-            <a href="/tags/gitee/">Gitee</a>
+            <a href="/tags/sandbox/">Sandbox</a>
         
-            <a href="/tags/github/">Github</a>
+            <a href="/tags/tencent/">Tencent</a>
         
-            <a href="/tags/blog/">Blog</a>
+            <a href="/tags/%E8%85%BE%E8%AE%AF/">腾讯</a>
+        
+            <a href="/tags/kook/">KOOK</a>
         
     </section>
 
@@ -732,25 +595,36 @@
             
                 
 <article class="">
-    <a href="/p/sandbox-configuration/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Windows 沙盒配置</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
     <a href="/p/resurrect-pandownload/">
         
         
 
         <div class="article-details">
             <h2 class="article-title">复活PanDownload</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/building-blogs-using-hexo-and-gitee/">
+        
+        
+            <div class="article-image">
+                <img src="/p/building-blogs-using-hexo-and-gitee/2020022010.6a196e2c9d987c203b9755161692408c_hua8f9359e6036282f4819538f1d5abd06_89996_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 利用hexo和gitee快速搭建免费博客"
+                        data-key="Building blogs using hexo and gitee" 
+                        data-hash="md5-ahluLJ2YfCA7l1UWFpJAjA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">利用hexo和gitee快速搭建免费博客</h2>
         </div>
     </a>
 </article>
