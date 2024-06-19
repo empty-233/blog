@@ -299,6 +299,7 @@
       <ol>
         <li><a href="#腾讯全家桶">腾讯全家桶</a></li>
         <li><a href="#kook">KOOK</a></li>
+        <li><a href="#百度网盘">百度网盘</a></li>
       </ol>
     </li>
   </ol>
@@ -365,7 +366,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 3 分钟
                 </time>
             </div>
         
@@ -453,10 +454,12 @@
     >官方文档</a></p>
 <p>tip: 如果出现问题，可以尝试把 <code>SysWOW64</code> 挂载到系统 <code>C:\Windows\SysWOW64</code>，或者安装软件完成之后复制 <code>SysWOW64</code> 并挂载</p>
 <h2 id="配置">配置
-</h2><p>欢迎联系作者提供更多配置，联系方式: <a class="link" href="mailto:mail@kongwu.top" >邮箱</a></p>
+</h2><p>欢迎在下面评论提供更多配置</p>
 <p>以下给出的是映射文件夹，可以参考 <a class="link" href="https://github.com/empty-233/tencent-sandbox"  target="_blank" rel="noopener"
     >tencent-sandbox</a> 来进行配置</p>
+<p>记得<strong>创建对应挂载的文件夹</strong></p>
 <p><del>想隔离游戏？先不说卡不卡，反作弊都绕不过</del></p>
+<p><del>沙盒上传比较慢(我的情况是这样的)</del></p>
 <h3 id="腾讯全家桶">腾讯全家桶
 </h3><p><a class="link" href="https://github.com/empty-233/tencent-sandbox"  target="_blank" rel="noopener"
     >tencent-sandbox</a></p>
@@ -517,6 +520,85 @@
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;HostFolder&gt;</span>.\Data\Documents\KOOK<span class="nt">&lt;/HostFolder&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\Documents\KOOK<span class="nt">&lt;/SandboxFolder&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;ReadOnly&gt;</span>false<span class="nt">&lt;/ReadOnly&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/MappedFolders&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="百度网盘">百度网盘
+</h3><p>第一次打开会让你选择是否通过Microsoft store获取，点否就行了</p>
+<p>记住<strong>下载位置</strong>，默认挂载了<strong>桌面</strong>，下载到桌面即可</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-XML" data-lang="XML"><span class="line"><span class="cl">    <span class="nt">&lt;MappedFolders&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- 桌面 --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;HostFolder&gt;</span>.\Desktop<span class="nt">&lt;/HostFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\Desktop<span class="nt">&lt;/SandboxFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;ReadOnly&gt;</span>false<span class="nt">&lt;/ReadOnly&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- Roaming --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;HostFolder&gt;</span>.\Data\Roaming\baidu<span class="nt">&lt;/HostFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\AppData\Roaming\baidu<span class="nt">&lt;/SandboxFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;ReadOnly&gt;</span>false<span class="nt">&lt;/ReadOnly&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;HostFolder&gt;</span>.\Data\Roaming\BaiduYunGuanjia<span class="nt">&lt;/HostFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\AppData\Roaming\BaiduYunGuanjia<span class="nt">&lt;/SandboxFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;ReadOnly&gt;</span>false<span class="nt">&lt;/ReadOnly&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;HostFolder&gt;</span>.\Data\Roaming\BaiduYunKernel<span class="nt">&lt;/HostFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\AppData\Roaming\BaiduYunKernel<span class="nt">&lt;/SandboxFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;ReadOnly&gt;</span>false<span class="nt">&lt;/ReadOnly&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;HostFolder&gt;</span>.\Data\Roaming\Adobe<span class="nt">&lt;/HostFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\AppData\Roaming\Adobe<span class="nt">&lt;/SandboxFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;ReadOnly&gt;</span>false<span class="nt">&lt;/ReadOnly&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- 脚本 --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;MappedFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;HostFolder&gt;</span>.\Scripts<span class="nt">&lt;/HostFolder&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;SandboxFolder&gt;</span>C:\Scripts<span class="nt">&lt;/SandboxFolder&gt;</span> 
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;ReadOnly&gt;</span>true<span class="nt">&lt;/ReadOnly&gt;</span> 
 </span></span><span class="line"><span class="cl">        <span class="nt">&lt;/MappedFolder&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;/MappedFolders&gt;</span>
 </span></span></code></pre></td></tr></table>
