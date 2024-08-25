@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>自建媒体库 on 空无的博客</title>
+        <link>https://blog.kongwu.top/tags/%E8%87%AA%E5%BB%BA%E5%AA%92%E4%BD%93%E5%BA%93/</link>
+        <description>Recent content in 自建媒体库 on 空无的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 25 Aug 2024 08:25:13 +0000</lastBuildDate><atom:link href="https://blog.kongwu.top/tags/%E8%87%AA%E5%BB%BA%E5%AA%92%E4%BD%93%E5%BA%93/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Auto Animation</title>
+        <link>https://blog.kongwu.top/p/auto-animation/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/p/auto-animation/</guid>
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/empty-233/auto-animation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;auto-animation&lt;/a&gt;打造自动化追番流程&lt;/p&gt;
+&lt;p&gt;国内的平台现在成了正版受害者，花钱看删减 &lt;del&gt;(点名叔叔，b站可能会变质，但绝对不会倒闭)&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/19.webp&#34;
+	width=&#34;2547&#34;
+	height=&#34;1266&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/19_hu0db9781fef8ab6172d22ffb37a3226fd_2118864_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/19_hu0db9781fef8ab6172d22ffb37a3226fd_2118864_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;演示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;201&#34;
+		data-flex-basis=&#34;482px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;部署教程&#34;&gt;部署教程
+&lt;/h2&gt;&lt;h3 id=&#34;安装&#34;&gt;安装
+&lt;/h3&gt;&lt;p&gt;建议使用4g及以上内存&lt;/p&gt;
+&lt;p&gt;使用 git 拉取本仓库 &lt;del&gt;(git安装教程我就忽略了，我详细看到这里的都会把)&lt;/del&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/empty-233/auto-animation.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;剩余操作请查看 &lt;a class=&#34;link&#34; href=&#34;https://github.com/empty-233/auto-animation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub项目说明&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里我以自动安装脚本，并使用 &lt;code&gt;Bridge&lt;/code&gt; 网络(建议使用 &lt;code&gt;Macvlan&lt;/code&gt; 网络，这里我为了演示方便使用 &lt;code&gt;Bridge&lt;/code&gt; 网络)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/01.webp&#34;
+	width=&#34;924&#34;
+	height=&#34;454&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/01_hu7d3fb28d3e82ba4187497811d8239e94_11448_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/01_hu7d3fb28d3e82ba4187497811d8239e94_11448_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;前置准备&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;203&#34;
+		data-flex-basis=&#34;488px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;注意媒体文件存储路径，这里我以 &lt;code&gt;/test&lt;/code&gt; 为例。使用 &lt;code&gt;Macvlan&lt;/code&gt; 网络时，注意&lt;strong&gt;网段&lt;/strong&gt;并且不要和&lt;strong&gt;现有ip冲突&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/02.webp&#34;
+	width=&#34;693&#34;
+	height=&#34;343&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/02_hu531537b70cd0301fdcda0402a567676b_60244_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/02_hu531537b70cd0301fdcda0402a567676b_60244_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;安装脚本&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;484px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;服务&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;jellyfin&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;ip:8096&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;qBittorrent&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;ip:8888&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;flaresolverr&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;ip:8191&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;prowlarr&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;ip:9696&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sonarr&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;ip:8989&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;radarr&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;ip:7878&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;jellyseerr&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;ip:5055&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;jproxy&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;ip:8117&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;chinesesubfinder&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;ip:19035&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;peerbanhelper&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;ip:9898&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;配置教程&#34;&gt;配置教程
+&lt;/h2&gt;&lt;h3 id=&#34;qbittorrent&#34;&gt;qBittorrent
+&lt;/h3&gt;&lt;p&gt;查看qBittorrent临时密码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker logs qBittorrent
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;登录之后点击左上角 &lt;code&gt;工具&lt;/code&gt; -&amp;gt; &lt;code&gt;选项&lt;/code&gt; -&amp;gt; &lt;code&gt;Web UI&lt;/code&gt; -&amp;gt; &lt;code&gt;验证&lt;/code&gt;，输入新的用户名和密码(记得点下面的保存)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;工具&lt;/code&gt; -&amp;gt; &lt;code&gt;选项&lt;/code&gt; -&amp;gt; &lt;code&gt;连接&lt;/code&gt; -&amp;gt; &lt;code&gt;连接限制&lt;/code&gt;，根据自己的网络调整&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;工具&lt;/code&gt; -&amp;gt; &lt;code&gt;选项&lt;/code&gt; -&amp;gt; &lt;code&gt;BitTorrent&lt;/code&gt; -&amp;gt; &lt;code&gt;做种限制&lt;/code&gt;，根据自己情况调整(强烈设置做种率在1以上，不要下完就跑)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;工具&lt;/code&gt; -&amp;gt; &lt;code&gt;选项&lt;/code&gt; -&amp;gt; &lt;code&gt;高级&lt;/code&gt; -&amp;gt; &lt;code&gt;上传连接策略&lt;/code&gt; 设置为 &lt;code&gt;反吸血&lt;/code&gt;，其他可以自行Google查询优化设置&lt;/p&gt;
+&lt;h3 id=&#34;prowlarr&#34;&gt;prowlarr
+&lt;/h3&gt;&lt;p&gt;访问 &lt;code&gt;ip:9696&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;全英文就慌了？别怕，后面可以改成简体中文，包括以下步骤都是&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;首先设置身份验证(建议设置，当然你也可以改成none)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/03.webp&#34;
+	width=&#34;745&#34;
+	height=&#34;666&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/03_huc3c83e4203646697f6ee95d7df8288a9_20902_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/03_huc3c83e4203646697f6ee95d7df8288a9_20902_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;设置身份验证&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;111&#34;
+		data-flex-basis=&#34;268px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入 &lt;code&gt;Setting&lt;/code&gt; -&amp;gt; &lt;code&gt;UI&lt;/code&gt;，修改 &lt;code&gt;UI Language&lt;/code&gt;(需要重启，记得点上面的Save Changes)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/04.webp&#34;
+	width=&#34;1394&#34;
+	height=&#34;1103&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/04_hud7af438ddb57e619a8b941daf6c93fbb_43566_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/04_hud7af438ddb57e619a8b941daf6c93fbb_43566_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;修改语言&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;126&#34;
+		data-flex-basis=&#34;303px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 重启&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose down &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;重启完成之后登录添加搜刮器代理，&lt;code&gt;设置&lt;/code&gt; -&amp;gt; &lt;code&gt;索引器&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;选择 &lt;code&gt;FlareSolverr&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;名称&lt;/td&gt;
+&lt;td&gt;保持默认即可，当然你也可以自行修改&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;标签&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;FlareSolverr&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主机&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://flaresolverr:8191/&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;进入 &lt;code&gt;索引器&lt;/code&gt; ，这里我添加 &lt;code&gt;Nyaa&lt;/code&gt; 和 &lt;code&gt;动漫花园&lt;/code&gt; 为例，只需要修改 &lt;code&gt;Base Url&lt;/code&gt; 和 &lt;code&gt;标签&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/05.webp&#34;
+	width=&#34;1932&#34;
+	height=&#34;1212&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/05_hu8e4510dbde136290df4237def50bc05c_39932_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/05_hu8e4510dbde136290df4237def50bc05c_39932_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;dmhy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;382px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入 &lt;code&gt;设置&lt;/code&gt; -&amp;gt; &lt;code&gt;应用程序&lt;/code&gt;，添加 &lt;code&gt;sonarr&lt;/code&gt; 和 &lt;code&gt;radarr&lt;/code&gt;(注意，请先按照下文的教程配置好基础设置，并且获取&lt;code&gt;API Key&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;sonarr和radarr &lt;code&gt;API Key&lt;/code&gt;在 &lt;code&gt;设置&lt;/code&gt; -&amp;gt; &lt;code&gt;通用&lt;/code&gt; -&amp;gt; &lt;code&gt;接口密钥 (API Key)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这里我以 &lt;code&gt;sonarr&lt;/code&gt; 为例，&lt;code&gt;radarr&lt;/code&gt; 只需要修改 &lt;code&gt;Radarr Server&lt;/code&gt; 地址为 &lt;code&gt;http://radarr:7878&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;注意：同步级别设置为&lt;strong&gt;仅添加和删除&lt;/strong&gt;，后面需要使用 &lt;code&gt;jproxy&lt;/code&gt; 代理，防止覆盖&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/06.webp&#34;
+	width=&#34;746&#34;
+	height=&#34;838&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/06_hu941316e077c850b768b59e290222e2b8_25388_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/06_hu941316e077c850b768b59e290222e2b8_25388_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;sonarr&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;89&#34;
+		data-flex-basis=&#34;213px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;sonarr&#34;&gt;sonarr
+&lt;/h3&gt;&lt;p&gt;访问 &lt;code&gt;ip:8989&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;身份验证和语言设置&lt;a class=&#34;link&#34; href=&#34;#prowlarr&#34; &gt;同上&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;进入 &lt;code&gt;设置&lt;/code&gt; -&amp;gt; &lt;code&gt;媒体管理&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;勾选 &lt;code&gt;重命名剧集&lt;/code&gt; (建议设置，为了让文件规范，jellyfin刮削)&lt;/p&gt;
+&lt;p&gt;点击左上角的 &lt;code&gt;显示高级&lt;/code&gt;，勾选 &lt;code&gt;为影片创建空文件夹&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;添加&lt;code&gt;根目录&lt;/code&gt;，路径为 &lt;code&gt;/data/TV/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/07.webp&#34;
+	width=&#34;1765&#34;
+	height=&#34;1019&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/07_hue8730d238e12258d0bcd7ebb09f2ffe5_11878_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/07_hue8730d238e12258d0bcd7ebb09f2ffe5_11878_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;TV&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;173&#34;
+		data-flex-basis=&#34;415px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入 &lt;code&gt;设置&lt;/code&gt; -&amp;gt; &lt;code&gt;下载客户端&lt;/code&gt; 添加 &lt;code&gt;qBittorrent&lt;/code&gt;，修改主机名和端口还有账号密码&lt;/p&gt;
+&lt;p&gt;下方的 &lt;code&gt;远程路径映射&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;主机&lt;/td&gt;
+&lt;td&gt;选择添加的 &lt;code&gt;qBittorrent&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;标签&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/Downloads&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主机&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/data/downloads/&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/08.webp&#34;
+	width=&#34;770&#34;
+	height=&#34;1164&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/08_hu126bb13000174b50cd056ba907da0ecf_22916_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/08_hu126bb13000174b50cd056ba907da0ecf_22916_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;qBittorrent&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;66&#34;
+		data-flex-basis=&#34;158px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/11.webp&#34;
+	width=&#34;1084&#34;
+	height=&#34;823&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/11_hu725fc80578e2b4125e56da8ae3880682_12306_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/11_hu725fc80578e2b4125e56da8ae3880682_12306_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;远程路径映射&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;131&#34;
+		data-flex-basis=&#34;316px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入 &lt;code&gt;设置&lt;/code&gt; -&amp;gt; &lt;code&gt;自定义命名格式&lt;/code&gt; 添加刮削中文选项，具体请参考：&lt;a class=&#34;link&#34; href=&#34;https://trash-guides.info/Sonarr/Tips/How-to-setup-language-custom-formats&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://trash-guides.info/Sonarr/Tips/How-to-setup-language-custom-formats&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/09.webp&#34;
+	width=&#34;1072&#34;
+	height=&#34;759&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/09_hub4dcf155d929cf861aadc3384e9c0b4b_12098_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/09_hub4dcf155d929cf861aadc3384e9c0b4b_12098_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Language: Chinese&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;141&#34;
+		data-flex-basis=&#34;338px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入 &lt;code&gt;设置&lt;/code&gt; -&amp;gt; &lt;code&gt;配置&lt;/code&gt; 添加新的媒体质量配置&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/10.webp&#34;
+	width=&#34;1933&#34;
+	height=&#34;1087&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/10_hu18bea83ec2640936e700e5064a5cbbc1_33640_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/10_hu18bea83ec2640936e700e5064a5cbbc1_33640_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1080p (Chinese only)&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第一次添加媒体可能会遇到无法创建文件夹，参考&lt;a class=&#34;link&#34; href=&#34;#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9&#34; &gt;注意事项&lt;/a&gt;中的 &lt;code&gt;sonarr &amp;amp;&amp;amp; radarr&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;radarr&#34;&gt;radarr
+&lt;/h3&gt;&lt;p&gt;访问 &lt;code&gt;ip:7878&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;基础设置和&lt;a class=&#34;link&#34; href=&#34;#sonarr&#34; &gt;sonarr&lt;/a&gt;一样，以下就只讲差异点&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Setting&lt;/code&gt; -&amp;gt; &lt;code&gt;UI&lt;/code&gt; -&amp;gt; &lt;code&gt;Movie Info Language&lt;/code&gt; 是刮削信息的语言，可以改成中文(sonarr不支持，官方的态度也不打算支持其他语言)&lt;/p&gt;
+&lt;p&gt;添加根目录时，路径为 &lt;code&gt;/data/Movies/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;第一次添加媒体可能会遇到无法创建文件夹，参考&lt;a class=&#34;link&#34; href=&#34;#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9&#34; &gt;注意事项&lt;/a&gt;中的 &lt;code&gt;sonarr &amp;amp;&amp;amp; radarr&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;jproxy&#34;&gt;jproxy
+&lt;/h3&gt;&lt;p&gt;访问 &lt;code&gt;ip:8117&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;默认账号密码，登录之后可以修改&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户：&lt;code&gt;jproxy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;密码：&lt;code&gt;jproxy@2023&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;申请TMDB API(建议申请): &lt;a class=&#34;link&#34; href=&#34;https://www.themoviedb.org/settings/api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.themoviedb.org/settings/api&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Sonarr -&amp;gt; 服务地址&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://sonarr:8989&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sonarr -&amp;gt; API 密钥&lt;/td&gt;
+&lt;td&gt;Sonarr API Key&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Radarr -&amp;gt; 服务地址&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://radarr:7878&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Radarr -&amp;gt; API 密钥&lt;/td&gt;
+&lt;td&gt;Radarr API Key&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;索引器 -&amp;gt; Prowlarr&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://prowlarr:9696&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;T M D B -&amp;gt; API 密钥&lt;/td&gt;
+&lt;td&gt;TMDB API Key&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/12.webp&#34;
+	width=&#34;2303&#34;
+	height=&#34;1140&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/12_hu2597ff9e316d460f7d5d050d5b315d51_18668_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/12_hu2597ff9e316d460f7d5d050d5b315d51_18668_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;jproxy 设置&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;484px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入 sonarr &lt;code&gt;设置&lt;/code&gt; -&amp;gt; &lt;code&gt;索引器&lt;/code&gt; 修改所以索引器，&lt;code&gt;URL&lt;/code&gt; 选项把 &lt;code&gt;http://prowlarr:9696&lt;/code&gt; 替换成 &lt;code&gt;http://jproxy:8117/sonarr/prowlarr&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;进入 radarr &lt;code&gt;设置&lt;/code&gt; -&amp;gt; &lt;code&gt;索引器&lt;/code&gt; 修改所以索引器，&lt;code&gt;URL&lt;/code&gt; 选项把 &lt;code&gt;http://prowlarr:9696&lt;/code&gt; 替换成 &lt;code&gt;http://jproxy:8117/radarr/prowlarr&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/13.webp&#34;
+	width=&#34;1089&#34;
+	height=&#34;1067&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/13_hu253a8a76be371ae528c00e75c0dbe330_24746_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/13_hu253a8a76be371ae528c00e75c0dbe330_24746_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;索引器设置&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;102&#34;
+		data-flex-basis=&#34;244px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;jellyfin&#34;&gt;jellyfin
+&lt;/h3&gt;&lt;p&gt;访问 &lt;code&gt;ip:8096&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;基础设置跳过，只讲关键部分&lt;/p&gt;
+&lt;p&gt;添加媒体库，TV路径为 &lt;code&gt;/media/TV&lt;/code&gt;，Movies路径为 &lt;code&gt;/media/Movies&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/14.webp&#34;
+	width=&#34;1568&#34;
+	height=&#34;1034&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/14_hu0fb7e0fc25c65dab3739267cbfa82353_21474_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/14_hu0fb7e0fc25c65dab3739267cbfa82353_21474_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;TV 设置&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;151&#34;
+		data-flex-basis=&#34;363px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/15.webp&#34;
+	width=&#34;1538&#34;
+	height=&#34;1026&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/15_hu1744a60be2e1fc6102aed323087cebd6_21386_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/15_hu1744a60be2e1fc6102aed323087cebd6_21386_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Movies 设置&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;jellyseerr&#34;&gt;jellyseerr
+&lt;/h3&gt;&lt;p&gt;访问 &lt;code&gt;ip:5055&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;右上角可以选择简体中文&lt;/p&gt;
+&lt;p&gt;选择 &lt;code&gt;Use your Jellyfin account&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jellyfin URL: &lt;code&gt;http://jellyfin:8096&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Email Address: 任意邮箱&lt;/li&gt;
+&lt;li&gt;Username: jellyfin 账号&lt;/li&gt;
+&lt;li&gt;Password: jellyfin 密码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;点击 &lt;code&gt;Sync Libraries&lt;/code&gt;，把刚刚创建的两个媒体库添加进去&lt;/p&gt;
+&lt;p&gt;添加 Radarr 和 Sonarr 服务器&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/16.webp&#34;
+	width=&#34;884&#34;
+	height=&#34;1078&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/16_hud6f3da2b6a6ce11b42006b658bf83bce_100684_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/16_hud6f3da2b6a6ce11b42006b658bf83bce_100684_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Radarr 设置&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;82&#34;
+		data-flex-basis=&#34;196px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/17.webp&#34;
+	width=&#34;908&#34;
+	height=&#34;1253&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/17_hud686511b55d60735ae6d6e4508e49c82_114202_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/17_hud686511b55d60735ae6d6e4508e49c82_114202_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Sonarr 设置&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;72&#34;
+		data-flex-basis=&#34;173px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;chinesesubfinder&#34;&gt;chinesesubfinder
+&lt;/h3&gt;&lt;p&gt;访问 &lt;code&gt;ip:19035&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;创建管理员账号密码&lt;/p&gt;
+&lt;p&gt;创建电影目录和连续剧目录&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电影目录: &lt;code&gt;/media/Movies&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;连续剧目录: &lt;code&gt;/media/TV&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;媒体服务器选择 &lt;code&gt;Jellyfin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ChineseSubFinder/ChineseSubFinder/tree/docs/DesignFile/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用教程&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;peerbanhelper&#34;&gt;peerbanhelper
+&lt;/h3&gt;&lt;p&gt;访问 &lt;code&gt;ip:9898&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;设置token(也就是鉴权密码)&lt;/p&gt;
+&lt;p&gt;添加下载器，选择 &lt;code&gt;qBittorrent&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;类型&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;qBittorrent&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;名称&lt;/td&gt;
+&lt;td&gt;任意&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;地址&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://qbittorrent:8888&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;用户名&lt;/td&gt;
+&lt;td&gt;qBittorrent 用户名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;密码&lt;/td&gt;
+&lt;td&gt;qBittorrent 密码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;使用教程&#34;&gt;使用教程
+&lt;/h2&gt;&lt;p&gt;访问 &lt;code&gt;ip:5055&lt;/code&gt;，搜索栏输入你想订阅的电影或者番剧(支持模糊搜索，数据来源TMDB)&lt;/p&gt;
+&lt;p&gt;点击提交请求，勾选你想订阅的季，并且在下面的质量设置选择 &lt;code&gt;1080p (Chinese only)&lt;/code&gt; (sonarr请选择你自定义的格式，radarr任意)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kongwu.top/p/auto-animation/18.webp&#34;
+	width=&#34;2190&#34;
+	height=&#34;1118&#34;
+	srcset=&#34;https://blog.kongwu.top/p/auto-animation/18_hu771dca44293918a13b46850a4a39fde4_585468_480x0_resize_q75_h2_box_2.webp 480w, https://blog.kongwu.top/p/auto-animation/18_hu771dca44293918a13b46850a4a39fde4_585468_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;支持模糊搜索&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;195&#34;
+		data-flex-basis=&#34;470px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;注意事项&#34;&gt;注意事项
+&lt;/h2&gt;&lt;h3 id=&#34;sonarr--radarr&#34;&gt;sonarr &amp;amp;&amp;amp; radarr
+&lt;/h3&gt;&lt;p&gt;如果第一次添加媒体遇到以下错误，请在媒体路径下新建空文件夹，添加完媒体后再删除(不明白为什么要这样判断)&lt;/p&gt;
+&lt;p&gt;| Series folder does not exist, skipping metadata image creation&lt;/p&gt;
+&lt;p&gt;| Could not find a part of the path &amp;lsquo;/data/TV/xxxxxx&amp;rsquo;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /test 为你的媒体路径，自行替换&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir /test/TV/empty
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 添加完媒体文件之后可以删除&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r /test/TV/empty
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /test 为你的媒体路径，自行替换&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir /test/Movies/empty
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 添加完媒体文件之后可以删除&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -r /test/Movies/empty
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

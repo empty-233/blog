@@ -6,7 +6,111 @@
         <description>Recent content in Tags on 空无的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 17 Jun 2024 10:58:05 +0000</lastBuildDate><atom:link href="https://blog.kongwu.top/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 25 Aug 2024 08:25:13 +0000</lastBuildDate><atom:link href="https://blog.kongwu.top/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>BT</title>
+        <link>https://blog.kongwu.top/tags/bt/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/bt/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Chinesesubfinder</title>
+        <link>https://blog.kongwu.top/tags/chinesesubfinder/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/chinesesubfinder/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Flaresolverr</title>
+        <link>https://blog.kongwu.top/tags/flaresolverr/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/flaresolverr/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Jellyfin</title>
+        <link>https://blog.kongwu.top/tags/jellyfin/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/jellyfin/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Jellyseerr</title>
+        <link>https://blog.kongwu.top/tags/jellyseerr/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/jellyseerr/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Jproxy</title>
+        <link>https://blog.kongwu.top/tags/jproxy/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/jproxy/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Peerbanhelper</title>
+        <link>https://blog.kongwu.top/tags/peerbanhelper/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/peerbanhelper/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Prowlarr</title>
+        <link>https://blog.kongwu.top/tags/prowlarr/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/prowlarr/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>QBittorrent</title>
+        <link>https://blog.kongwu.top/tags/qbittorrent/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/qbittorrent/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Radarr</title>
+        <link>https://blog.kongwu.top/tags/radarr/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/radarr/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Sonarr</title>
+        <link>https://blog.kongwu.top/tags/sonarr/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/sonarr/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>自建</title>
+        <link>https://blog.kongwu.top/tags/%E8%87%AA%E5%BB%BA/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/%E8%87%AA%E5%BB%BA/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>自建媒体库</title>
+        <link>https://blog.kongwu.top/tags/%E8%87%AA%E5%BB%BA%E5%AA%92%E4%BD%93%E5%BA%93/</link>
+        <pubDate>Sun, 25 Aug 2024 08:25:13 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/%E8%87%AA%E5%BB%BA%E5%AA%92%E4%BD%93%E5%BA%93/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>KOOK</title>
         <link>https://blog.kongwu.top/tags/kook/</link>
         <pubDate>Mon, 17 Jun 2024 10:58:05 +0000</pubDate>
@@ -39,11 +143,27 @@
         <description></description>
         </item>
         <item>
+        <title>百度网盘</title>
+        <link>https://blog.kongwu.top/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/</link>
+        <pubDate>Mon, 17 Jun 2024 10:58:05 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>腾讯</title>
         <link>https://blog.kongwu.top/tags/%E8%85%BE%E8%AE%AF/</link>
         <pubDate>Mon, 17 Jun 2024 10:58:05 +0000</pubDate>
         
         <guid>https://blog.kongwu.top/tags/%E8%85%BE%E8%AE%AF/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>网易云音乐</title>
+        <link>https://blog.kongwu.top/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</link>
+        <pubDate>Mon, 17 Jun 2024 10:58:05 +0000</pubDate>
+        
+        <guid>https://blog.kongwu.top/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</guid>
         <description></description>
         </item>
         <item>

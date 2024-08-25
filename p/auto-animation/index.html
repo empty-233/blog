@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="auto-animation打造自动化追番流程 国内的平台现在成了正版受害者，花钱看删减 (点名叔叔，b站可能会变质，但绝对不会倒闭) 部署教程 安">
+<title>Auto Animation</title>
+
+<link rel='canonical' href='https://blog.kongwu.top/p/auto-animation/'>
+
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Auto Animation">
+<meta property='og:description' content="auto-animation打造自动化追番流程 国内的平台现在成了正版受害者，花钱看删减 (点名叔叔，b站可能会变质，但绝对不会倒闭) 部署教程 安">
+<meta property='og:url' content='https://blog.kongwu.top/p/auto-animation/'>
+<meta property='og:site_name' content='空无的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='自建' /><meta property='article:tag' content='自建媒体库' /><meta property='article:tag' content='BT' /><meta property='article:tag' content='jellyfin' /><meta property='article:tag' content='qBittorrent' /><meta property='article:tag' content='flaresolverr' /><meta property='article:tag' content='prowlarr' /><meta property='article:tag' content='sonarr' /><meta property='article:tag' content='radarr' /><meta property='article:tag' content='jellyseerr' /><meta property='article:tag' content='jproxy' /><meta property='article:tag' content='chinesesubfinder' /><meta property='article:tag' content='peerbanhelper' /><meta property='article:published_time' content='2024-08-25T08:25:13&#43;00:00'/><meta property='article:modified_time' content='2024-08-25T08:25:13&#43;00:00'/>
+<meta name="twitter:title" content="Auto Animation">
+<meta name="twitter:description" content="auto-animation打造自动化追番流程 国内的平台现在成了正版受害者，花钱看删减 (点名叔叔，b站可能会变质，但绝对不会倒闭) 部署教程 安">
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-N7LHGEE4LB"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-N7LHGEE4LB');
+        }
+      </script>
+    
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huab6f5c1177f30831cb74f92a20a08f87_987604_300x0_resize_q75_h2_box_2.webp" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">💕</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">空无的博客</a></h1>
+            <h2 class="site-description">欢迎来到空无的博客</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/8559535'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/empty-233'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:mail@kongwu.top'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#部署教程">部署教程</a>
+      <ol>
+        <li><a href="#安装">安装</a></li>
+      </ol>
+    </li>
+    <li><a href="#配置教程">配置教程</a>
+      <ol>
+        <li><a href="#qbittorrent">qBittorrent</a></li>
+        <li><a href="#prowlarr">prowlarr</a></li>
+        <li><a href="#sonarr">sonarr</a></li>
+        <li><a href="#radarr">radarr</a></li>
+        <li><a href="#jproxy">jproxy</a></li>
+        <li><a href="#jellyfin">jellyfin</a></li>
+        <li><a href="#jellyseerr">jellyseerr</a></li>
+        <li><a href="#chinesesubfinder">chinesesubfinder</a></li>
+        <li><a href="#peerbanhelper">peerbanhelper</a></li>
+      </ol>
+    </li>
+    <li><a href="#使用教程">使用教程</a></li>
+    <li><a href="#注意事项">注意事项</a>
+      <ol>
+        <li><a href="#sonarr--radarr">sonarr &amp;&amp; radarr</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%95%99%E7%A8%8B/" >
+                教程
+            </a>
+        
+            <a href="/categories/%E8%87%AA%E5%BB%BA%E5%AA%92%E4%BD%93%E5%BA%93/" >
+                自建媒体库
+            </a>
+        
+            <a href="/categories/bt/" >
+                BT
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/auto-animation/">Auto Animation</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 25, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><a class="link" href="https://github.com/empty-233/auto-animation"  target="_blank" rel="noopener"
+    >auto-animation</a>打造自动化追番流程</p>
+<p>国内的平台现在成了正版受害者，花钱看删减 <del>(点名叔叔，b站可能会变质，但绝对不会倒闭)</del></p>
+<p><img src="/p/auto-animation/19.webp"
+	width="2547"
+	height="1266"
+	srcset="/p/auto-animation/19_hu0db9781fef8ab6172d22ffb37a3226fd_2118864_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/19_hu0db9781fef8ab6172d22ffb37a3226fd_2118864_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="演示"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="201"
+		data-flex-basis="482px"
+	
+></p>
+<h2 id="部署教程">部署教程
+</h2><h3 id="安装">安装
+</h3><p>建议使用4g及以上内存</p>
+<p>使用 git 拉取本仓库 <del>(git安装教程我就忽略了，我详细看到这里的都会把)</del></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/empty-233/auto-animation.git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>剩余操作请查看 <a class="link" href="https://github.com/empty-233/auto-animation"  target="_blank" rel="noopener"
+    >GitHub项目说明</a></p>
+<p>这里我以自动安装脚本，并使用 <code>Bridge</code> 网络(建议使用 <code>Macvlan</code> 网络，这里我为了演示方便使用 <code>Bridge</code> 网络)</p>
+<p><img src="/p/auto-animation/01.webp"
+	width="924"
+	height="454"
+	srcset="/p/auto-animation/01_hu7d3fb28d3e82ba4187497811d8239e94_11448_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/01_hu7d3fb28d3e82ba4187497811d8239e94_11448_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="前置准备"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+></p>
+<p>注意媒体文件存储路径，这里我以 <code>/test</code> 为例。使用 <code>Macvlan</code> 网络时，注意<strong>网段</strong>并且不要和<strong>现有ip冲突</strong></p>
+<p><img src="/p/auto-animation/02.webp"
+	width="693"
+	height="343"
+	srcset="/p/auto-animation/02_hu531537b70cd0301fdcda0402a567676b_60244_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/02_hu531537b70cd0301fdcda0402a567676b_60244_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="安装脚本"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="202"
+		data-flex-basis="484px"
+	
+></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>服务</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jellyfin</td>
+<td><code>ip:8096</code></td>
+</tr>
+<tr>
+<td>qBittorrent</td>
+<td><code>ip:8888</code></td>
+</tr>
+<tr>
+<td>flaresolverr</td>
+<td><code>ip:8191</code></td>
+</tr>
+<tr>
+<td>prowlarr</td>
+<td><code>ip:9696</code></td>
+</tr>
+<tr>
+<td>sonarr</td>
+<td><code>ip:8989</code></td>
+</tr>
+<tr>
+<td>radarr</td>
+<td><code>ip:7878</code></td>
+</tr>
+<tr>
+<td>jellyseerr</td>
+<td><code>ip:5055</code></td>
+</tr>
+<tr>
+<td>jproxy</td>
+<td><code>ip:8117</code></td>
+</tr>
+<tr>
+<td>chinesesubfinder</td>
+<td><code>ip:19035</code></td>
+</tr>
+<tr>
+<td>peerbanhelper</td>
+<td><code>ip:9898</code></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="配置教程">配置教程
+</h2><h3 id="qbittorrent">qBittorrent
+</h3><p>查看qBittorrent临时密码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker logs qBittorrent
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>登录之后点击左上角 <code>工具</code> -&gt; <code>选项</code> -&gt; <code>Web UI</code> -&gt; <code>验证</code>，输入新的用户名和密码(记得点下面的保存)</p>
+<p><code>工具</code> -&gt; <code>选项</code> -&gt; <code>连接</code> -&gt; <code>连接限制</code>，根据自己的网络调整</p>
+<p><code>工具</code> -&gt; <code>选项</code> -&gt; <code>BitTorrent</code> -&gt; <code>做种限制</code>，根据自己情况调整(强烈设置做种率在1以上，不要下完就跑)</p>
+<p><code>工具</code> -&gt; <code>选项</code> -&gt; <code>高级</code> -&gt; <code>上传连接策略</code> 设置为 <code>反吸血</code>，其他可以自行Google查询优化设置</p>
+<h3 id="prowlarr">prowlarr
+</h3><p>访问 <code>ip:9696</code></p>
+<p><del>全英文就慌了？别怕，后面可以改成简体中文，包括以下步骤都是</del></p>
+<p>首先设置身份验证(建议设置，当然你也可以改成none)</p>
+<p><img src="/p/auto-animation/03.webp"
+	width="745"
+	height="666"
+	srcset="/p/auto-animation/03_huc3c83e4203646697f6ee95d7df8288a9_20902_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/03_huc3c83e4203646697f6ee95d7df8288a9_20902_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="设置身份验证"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="111"
+		data-flex-basis="268px"
+	
+></p>
+<p>进入 <code>Setting</code> -&gt; <code>UI</code>，修改 <code>UI Language</code>(需要重启，记得点上面的Save Changes)</p>
+<p><img src="/p/auto-animation/04.webp"
+	width="1394"
+	height="1103"
+	srcset="/p/auto-animation/04_hud7af438ddb57e619a8b941daf6c93fbb_43566_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/04_hud7af438ddb57e619a8b941daf6c93fbb_43566_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="修改语言"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="126"
+		data-flex-basis="303px"
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 重启</span>
+</span></span><span class="line"><span class="cl">docker compose down <span class="o">&amp;&amp;</span> docker compose up -d
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>重启完成之后登录添加搜刮器代理，<code>设置</code> -&gt; <code>索引器</code></p>
+<p>选择 <code>FlareSolverr</code></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>名称</td>
+<td>保持默认即可，当然你也可以自行修改</td>
+</tr>
+<tr>
+<td>标签</td>
+<td><code>FlareSolverr</code></td>
+</tr>
+<tr>
+<td>主机</td>
+<td><code>http://flaresolverr:8191/</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>进入 <code>索引器</code> ，这里我添加 <code>Nyaa</code> 和 <code>动漫花园</code> 为例，只需要修改 <code>Base Url</code> 和 <code>标签</code></p>
+<p><img src="/p/auto-animation/05.webp"
+	width="1932"
+	height="1212"
+	srcset="/p/auto-animation/05_hu8e4510dbde136290df4237def50bc05c_39932_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/05_hu8e4510dbde136290df4237def50bc05c_39932_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="dmhy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="159"
+		data-flex-basis="382px"
+	
+></p>
+<p>进入 <code>设置</code> -&gt; <code>应用程序</code>，添加 <code>sonarr</code> 和 <code>radarr</code>(注意，请先按照下文的教程配置好基础设置，并且获取<code>API Key</code>)</p>
+<p>sonarr和radarr <code>API Key</code>在 <code>设置</code> -&gt; <code>通用</code> -&gt; <code>接口密钥 (API Key)</code></p>
+<p>这里我以 <code>sonarr</code> 为例，<code>radarr</code> 只需要修改 <code>Radarr Server</code> 地址为 <code>http://radarr:7878</code></p>
+<p>注意：同步级别设置为<strong>仅添加和删除</strong>，后面需要使用 <code>jproxy</code> 代理，防止覆盖</p>
+<p><img src="/p/auto-animation/06.webp"
+	width="746"
+	height="838"
+	srcset="/p/auto-animation/06_hu941316e077c850b768b59e290222e2b8_25388_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/06_hu941316e077c850b768b59e290222e2b8_25388_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="sonarr"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="89"
+		data-flex-basis="213px"
+	
+></p>
+<h3 id="sonarr">sonarr
+</h3><p>访问 <code>ip:8989</code></p>
+<p>身份验证和语言设置<a class="link" href="#prowlarr" >同上</a></p>
+<p>进入 <code>设置</code> -&gt; <code>媒体管理</code></p>
+<p>勾选 <code>重命名剧集</code> (建议设置，为了让文件规范，jellyfin刮削)</p>
+<p>点击左上角的 <code>显示高级</code>，勾选 <code>为影片创建空文件夹</code></p>
+<p>添加<code>根目录</code>，路径为 <code>/data/TV/</code></p>
+<p><img src="/p/auto-animation/07.webp"
+	width="1765"
+	height="1019"
+	srcset="/p/auto-animation/07_hue8730d238e12258d0bcd7ebb09f2ffe5_11878_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/07_hue8730d238e12258d0bcd7ebb09f2ffe5_11878_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="TV"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="173"
+		data-flex-basis="415px"
+	
+></p>
+<p>进入 <code>设置</code> -&gt; <code>下载客户端</code> 添加 <code>qBittorrent</code>，修改主机名和端口还有账号密码</p>
+<p>下方的 <code>远程路径映射</code></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主机</td>
+<td>选择添加的 <code>qBittorrent</code></td>
+</tr>
+<tr>
+<td>标签</td>
+<td><code>/Downloads</code></td>
+</tr>
+<tr>
+<td>主机</td>
+<td><code>/data/downloads/</code></td>
+</tr>
+</tbody>
+</table></div>
+<p><img src="/p/auto-animation/08.webp"
+	width="770"
+	height="1164"
+	srcset="/p/auto-animation/08_hu126bb13000174b50cd056ba907da0ecf_22916_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/08_hu126bb13000174b50cd056ba907da0ecf_22916_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="qBittorrent"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="66"
+		data-flex-basis="158px"
+	
+></p>
+<p><img src="/p/auto-animation/11.webp"
+	width="1084"
+	height="823"
+	srcset="/p/auto-animation/11_hu725fc80578e2b4125e56da8ae3880682_12306_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/11_hu725fc80578e2b4125e56da8ae3880682_12306_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="远程路径映射"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="131"
+		data-flex-basis="316px"
+	
+></p>
+<p>进入 <code>设置</code> -&gt; <code>自定义命名格式</code> 添加刮削中文选项，具体请参考：<a class="link" href="https://trash-guides.info/Sonarr/Tips/How-to-setup-language-custom-formats"  target="_blank" rel="noopener"
+    >https://trash-guides.info/Sonarr/Tips/How-to-setup-language-custom-formats</a></p>
+<p><img src="/p/auto-animation/09.webp"
+	width="1072"
+	height="759"
+	srcset="/p/auto-animation/09_hub4dcf155d929cf861aadc3384e9c0b4b_12098_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/09_hub4dcf155d929cf861aadc3384e9c0b4b_12098_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="Language: Chinese"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="141"
+		data-flex-basis="338px"
+	
+></p>
+<p>进入 <code>设置</code> -&gt; <code>配置</code> 添加新的媒体质量配置</p>
+<p><img src="/p/auto-animation/10.webp"
+	width="1933"
+	height="1087"
+	srcset="/p/auto-animation/10_hu18bea83ec2640936e700e5064a5cbbc1_33640_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/10_hu18bea83ec2640936e700e5064a5cbbc1_33640_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="1080p (Chinese only)"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>第一次添加媒体可能会遇到无法创建文件夹，参考<a class="link" href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" >注意事项</a>中的 <code>sonarr &amp;&amp; radarr</code></p>
+<h3 id="radarr">radarr
+</h3><p>访问 <code>ip:7878</code></p>
+<p>基础设置和<a class="link" href="#sonarr" >sonarr</a>一样，以下就只讲差异点</p>
+<p><code>Setting</code> -&gt; <code>UI</code> -&gt; <code>Movie Info Language</code> 是刮削信息的语言，可以改成中文(sonarr不支持，官方的态度也不打算支持其他语言)</p>
+<p>添加根目录时，路径为 <code>/data/Movies/</code></p>
+<p>第一次添加媒体可能会遇到无法创建文件夹，参考<a class="link" href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" >注意事项</a>中的 <code>sonarr &amp;&amp; radarr</code></p>
+<h3 id="jproxy">jproxy
+</h3><p>访问 <code>ip:8117</code></p>
+<p>默认账号密码，登录之后可以修改</p>
+<ul>
+<li>用户：<code>jproxy</code></li>
+<li>密码：<code>jproxy@2023</code></li>
+</ul>
+<p>申请TMDB API(建议申请): <a class="link" href="https://www.themoviedb.org/settings/api"  target="_blank" rel="noopener"
+    >https://www.themoviedb.org/settings/api</a></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sonarr -&gt; 服务地址</td>
+<td><code>http://sonarr:8989</code></td>
+</tr>
+<tr>
+<td>Sonarr -&gt; API 密钥</td>
+<td>Sonarr API Key</td>
+</tr>
+<tr>
+<td>Radarr -&gt; 服务地址</td>
+<td><code>http://radarr:7878</code></td>
+</tr>
+<tr>
+<td>Radarr -&gt; API 密钥</td>
+<td>Radarr API Key</td>
+</tr>
+<tr>
+<td>索引器 -&gt; Prowlarr</td>
+<td><code>http://prowlarr:9696</code></td>
+</tr>
+<tr>
+<td>T M D B -&gt; API 密钥</td>
+<td>TMDB API Key</td>
+</tr>
+</tbody>
+</table></div>
+<p><img src="/p/auto-animation/12.webp"
+	width="2303"
+	height="1140"
+	srcset="/p/auto-animation/12_hu2597ff9e316d460f7d5d050d5b315d51_18668_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/12_hu2597ff9e316d460f7d5d050d5b315d51_18668_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="jproxy 设置"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="202"
+		data-flex-basis="484px"
+	
+></p>
+<p>进入 sonarr <code>设置</code> -&gt; <code>索引器</code> 修改所以索引器，<code>URL</code> 选项把 <code>http://prowlarr:9696</code> 替换成 <code>http://jproxy:8117/sonarr/prowlarr</code></p>
+<p>进入 radarr <code>设置</code> -&gt; <code>索引器</code> 修改所以索引器，<code>URL</code> 选项把 <code>http://prowlarr:9696</code> 替换成 <code>http://jproxy:8117/radarr/prowlarr</code></p>
+<p><img src="/p/auto-animation/13.webp"
+	width="1089"
+	height="1067"
+	srcset="/p/auto-animation/13_hu253a8a76be371ae528c00e75c0dbe330_24746_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/13_hu253a8a76be371ae528c00e75c0dbe330_24746_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="索引器设置"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="102"
+		data-flex-basis="244px"
+	
+></p>
+<h3 id="jellyfin">jellyfin
+</h3><p>访问 <code>ip:8096</code></p>
+<p>基础设置跳过，只讲关键部分</p>
+<p>添加媒体库，TV路径为 <code>/media/TV</code>，Movies路径为 <code>/media/Movies</code></p>
+<p><img src="/p/auto-animation/14.webp"
+	width="1568"
+	height="1034"
+	srcset="/p/auto-animation/14_hu0fb7e0fc25c65dab3739267cbfa82353_21474_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/14_hu0fb7e0fc25c65dab3739267cbfa82353_21474_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="TV 设置"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="151"
+		data-flex-basis="363px"
+	
+></p>
+<p><img src="/p/auto-animation/15.webp"
+	width="1538"
+	height="1026"
+	srcset="/p/auto-animation/15_hu1744a60be2e1fc6102aed323087cebd6_21386_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/15_hu1744a60be2e1fc6102aed323087cebd6_21386_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="Movies 设置"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="359px"
+	
+></p>
+<h3 id="jellyseerr">jellyseerr
+</h3><p>访问 <code>ip:5055</code></p>
+<p>右上角可以选择简体中文</p>
+<p>选择 <code>Use your Jellyfin account</code></p>
+<ul>
+<li>Jellyfin URL: <code>http://jellyfin:8096</code></li>
+<li>Email Address: 任意邮箱</li>
+<li>Username: jellyfin 账号</li>
+<li>Password: jellyfin 密码</li>
+</ul>
+<p>点击 <code>Sync Libraries</code>，把刚刚创建的两个媒体库添加进去</p>
+<p>添加 Radarr 和 Sonarr 服务器</p>
+<p><img src="/p/auto-animation/16.webp"
+	width="884"
+	height="1078"
+	srcset="/p/auto-animation/16_hud6f3da2b6a6ce11b42006b658bf83bce_100684_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/16_hud6f3da2b6a6ce11b42006b658bf83bce_100684_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="Radarr 设置"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="82"
+		data-flex-basis="196px"
+	
+></p>
+<p><img src="/p/auto-animation/17.webp"
+	width="908"
+	height="1253"
+	srcset="/p/auto-animation/17_hud686511b55d60735ae6d6e4508e49c82_114202_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/17_hud686511b55d60735ae6d6e4508e49c82_114202_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="Sonarr 设置"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="72"
+		data-flex-basis="173px"
+	
+></p>
+<h3 id="chinesesubfinder">chinesesubfinder
+</h3><p>访问 <code>ip:19035</code></p>
+<p>创建管理员账号密码</p>
+<p>创建电影目录和连续剧目录</p>
+<ul>
+<li>电影目录: <code>/media/Movies</code></li>
+<li>连续剧目录: <code>/media/TV</code></li>
+</ul>
+<p>媒体服务器选择 <code>Jellyfin</code></p>
+<p><a class="link" href="https://github.com/ChineseSubFinder/ChineseSubFinder/tree/docs/DesignFile/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"  target="_blank" rel="noopener"
+    >使用教程</a></p>
+<h3 id="peerbanhelper">peerbanhelper
+</h3><p>访问 <code>ip:9898</code></p>
+<p>设置token(也就是鉴权密码)</p>
+<p>添加下载器，选择 <code>qBittorrent</code></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>类型</td>
+<td><code>qBittorrent</code></td>
+</tr>
+<tr>
+<td>名称</td>
+<td>任意</td>
+</tr>
+<tr>
+<td>地址</td>
+<td><code>http://qbittorrent:8888</code></td>
+</tr>
+<tr>
+<td>用户名</td>
+<td>qBittorrent 用户名</td>
+</tr>
+<tr>
+<td>密码</td>
+<td>qBittorrent 密码</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="使用教程">使用教程
+</h2><p>访问 <code>ip:5055</code>，搜索栏输入你想订阅的电影或者番剧(支持模糊搜索，数据来源TMDB)</p>
+<p>点击提交请求，勾选你想订阅的季，并且在下面的质量设置选择 <code>1080p (Chinese only)</code> (sonarr请选择你自定义的格式，radarr任意)</p>
+<p><img src="/p/auto-animation/18.webp"
+	width="2190"
+	height="1118"
+	srcset="/p/auto-animation/18_hu771dca44293918a13b46850a4a39fde4_585468_480x0_resize_q75_h2_box_2.webp 480w, /p/auto-animation/18_hu771dca44293918a13b46850a4a39fde4_585468_1024x0_resize_q75_h2_box_2.webp 1024w"
+	loading="lazy"
+	
+		alt="支持模糊搜索"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="195"
+		data-flex-basis="470px"
+	
+></p>
+<h2 id="注意事项">注意事项
+</h2><h3 id="sonarr--radarr">sonarr &amp;&amp; radarr
+</h3><p>如果第一次添加媒体遇到以下错误，请在媒体路径下新建空文件夹，添加完媒体后再删除(不明白为什么要这样判断)</p>
+<p>| Series folder does not exist, skipping metadata image creation</p>
+<p>| Could not find a part of the path &lsquo;/data/TV/xxxxxx&rsquo;.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># /test 为你的媒体路径，自行替换</span>
+</span></span><span class="line"><span class="cl">mkdir /test/TV/empty
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加完媒体文件之后可以删除</span>
+</span></span><span class="line"><span class="cl">rm -r /test/TV/empty
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># /test 为你的媒体路径，自行替换</span>
+</span></span><span class="line"><span class="cl">mkdir /test/Movies/empty
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加完媒体文件之后可以删除</span>
+</span></span><span class="line"><span class="cl">rm -r /test/Movies/empty
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E8%87%AA%E5%BB%BA/">自建</a>
+        
+            <a href="/tags/%E8%87%AA%E5%BB%BA%E5%AA%92%E4%BD%93%E5%BA%93/">自建媒体库</a>
+        
+            <a href="/tags/bt/">BT</a>
+        
+            <a href="/tags/jellyfin/">Jellyfin</a>
+        
+            <a href="/tags/qbittorrent/">QBittorrent</a>
+        
+            <a href="/tags/flaresolverr/">Flaresolverr</a>
+        
+            <a href="/tags/prowlarr/">Prowlarr</a>
+        
+            <a href="/tags/sonarr/">Sonarr</a>
+        
+            <a href="/tags/radarr/">Radarr</a>
+        
+            <a href="/tags/jellyseerr/">Jellyseerr</a>
+        
+            <a href="/tags/jproxy/">Jproxy</a>
+        
+            <a href="/tags/chinesesubfinder/">Chinesesubfinder</a>
+        
+            <a href="/tags/peerbanhelper/">Peerbanhelper</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-ND 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/sandbox-configuration/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Windows 沙盒配置</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/resurrect-pandownload/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">复活PanDownload</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/building-blogs-using-hexo-and-gitee/">
+        
+        
+            <div class="article-image">
+                <img src="/p/building-blogs-using-hexo-and-gitee/2020022010.6a196e2c9d987c203b9755161692408c_hua8f9359e6036282f4819538f1d5abd06_89996_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 利用hexo和gitee快速搭建免费博客"
+                        data-key="Building blogs using hexo and gitee" 
+                        data-hash="md5-ahluLJ2YfCA7l1UWFpJAjA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">利用hexo和gitee快速搭建免费博客</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="empty-233/blog"
+    data-repo-id="R_kgDOL-Xchw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOL-Xch84CfgH6"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 空无的博客
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
