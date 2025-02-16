@@ -25,6 +25,8 @@
 &lt;li&gt;高效：采用集成的内核计划程序、智能内存管理和虚拟 GPU。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;注意事项&#34;&gt;注意事项
+&lt;/h2&gt;&lt;p&gt;windows sandbox只能开启&lt;strong&gt;一个&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/zh-cn/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview#installation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;官方教程&lt;/a&gt;&lt;/p&gt;
